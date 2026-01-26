@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0f0f;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+
+#about {
+  font-size: 14px;
+  width: 21.5em;
+  height: 100%;
+  padding: 2.85em 1.4em;
+  border-right: 1px solid #ffffff33;
+  overflow-y: auto;
+  background-color: #0f0f0f;
+  z-index: 10;
+  transition-property: opacity, left;
+  transition-duration: 400ms;
+}
+
+#about > * {
+  margin-bottom: 0.7em;
+}
+
+#about .logo {
+  position: relative;
+  display: block;
+  width: 60%;
+  margin-inline: 20%;
+}
+
+#about .logo img {
+  width: 100%;
+}
+
+#about .logo .hover-block {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+  opacity: 0;
+  border-radius: calc(infinity * 1px);
+}
+
+#about .logo .hover-block:hover {
+  opacity: 1;
+}
+
+#about .logo .hover-block svg {
+  width: 20%;
+  margin: auto;
+  fill: white;
+}
+
+#about .name {
+  font-size: 2.14em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+#about .description {
+  color: #f1f1f1;
+}
+
+#about .divider {
+  height: 1px;
+  background-color: #ffffff33;
+  margin-bottom: 1.71em;
+}
+
+#about .label {
+  display: flex;
+  align-items: center;
+}
+
+#about .label .icon {
+  fill: #f1f1f1;
+  height: 1.57em;
+  width: 1.57em;
+  margin-right: 0.57em;
+}
+
+#about .label .text,
+#about .label .text * {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+#about .footer,
+#about .copyright {
+  text-align: center;
+  color: #aaaaaa;
+  margin-bottom: 0.25em;
+}
+
+#requests {
+  font-size: 16px;
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25em;
+  padding-bottom: 2em;
+}
+
+#requests .divider {
+  height: 1px;
+  background-color: #ffffff33;
+  margin-bottom: 1.5em;
+  margin-top: 0.625em;
+}
+
+#requests .title {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #f1f1f1;
+  margin-bottom: 0.5em;
+}
+
+#requests .informations {
+  color: #aaaaaa;
+}
+
+#requests .informations > div {
+  margin-bottom: 0.625em;
+}
+
+#requests .informations a {
+  color: dodgerblue;
+}
+
+#requests-list .request {
+  position: relative;
+  display: flex;
+  padding-left: 0.5em;
+  padding-block: 0.625em;
+}
+
+#requests-list .request:first-child {
+  padding-top: 0;
+}
+
+#requests-list .request:not(:first-child) {
+  border-top: 1px solid #ffffff33;
+}
+
+#requests-list .request .order {
+  font-size: 1em;
+  font-weight: bold;
+  width: 1.25em;
+  padding-right: 0.5em;
+  color: #f1f1f1;
+  word-break: break-all;
+}
+
+#requests-list .request img {
+  height: 3.75em;
+  width: 6.6666667em;
+  border-radius: 0.25em;
+  margin-right: 0.625em;
+}
+
+#requests-list .request .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#requests-list .request .title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 1.125em;
+  font-weight: bold;
+  color: #f1f1f1;
+  margin-bottom: 0.25em;
+  text-decoration: none;
+}
+
+#requests-list .request .title:hover {
+  text-decoration: underline;
+}
+
+#requests-list .request .right .bottom {
+  display: flex;
+  flex-wrap: wrap;
+  color: #aaaaaa;
+  font-size: 0.875em;
+  font-weight: bold;
+}
+
+#requests-list .request .right .bottom > * {
+  text-wrap: nowrap;
+}
+
+#requests-list .request .request-text {
+  margin-right: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+#requests-list .request .priority,
+#requests-list .request .remaining {
+  position: absolute;
+  font-size: 0.9em;
+  font-weight: 500;
+  right: 0;
+  padding: 0.1em 0.4em;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0.5em black;
+}
+
+#requests-list .request .priority {
+  background-color: #00acac;
+  color: white;
+}
+
+#requests-list .request .remaining {
+  background-color: #272727;
+  color: #2A8F3B;
+}
+
+#requests-list .request .remaining::before {
+  content: "⏱ ";
+  font-weight: 900;
+}
+
+#requests-list .empty {
+  font-size: 1.125em;
+  color: #aaaaaa;
+  text-align: center;
+}
+
+#sidebar {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 10px;
+  width: 60px;
+  height: 100%;
+  border-right: 1px solid #ffffff33;
+}
+
+#sidebar > button {
+  width: 70%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+#sidebar > button > img {
+  display: block;
+  width: 100%;
+}
+
+#sidebar > button > * {
+  pointer-events: none;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #000000aa;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms;
+}
+
+#overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    display: flex;
+  }
+
+  #about {
+    position: fixed;
+    top: 0;
+    left: -4em;
+    opacity: 0;
+    pointer-events: none;
+    border-width: 2px;
+  }
+
+  #about.show {
+    left: 0;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    width: 55px;
+  }
+
+  #requests {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  #sidebar {
+    width: 50px;
+  }
+
+  #about {
+    font-size: 13px;
+  }
+
+  #requests {
+    font-size: 14px;
+    padding: 0.6em;
+    --ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  #requests::-webkit-scrollbar {
+    display: none;
+  }
+
+  #requests-list .request {
+    margin-bottom: 0.4em;
+    padding-left: 0.6em;
+  }
+
+  #requests .divider {
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+  #sidebar {
+    width: 45px;
+  }
+
+  #about {
+    font-size: 12px;
+    padding-block: 2em;
+  }
+
+  #requests {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 300px) {
+  #sidebar {
+    display: none;
+  }
+
+  #requests {
+    font-size: 12px;
+  }
+}
+
+.custom-scrollbar {
+  scrollbar-color: #8b8b8b #0f0f0f;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #0f0f0f;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #8b8b8b;
+}
+
+.scrollbar-none {
+  --ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
