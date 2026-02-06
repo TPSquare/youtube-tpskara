@@ -50,8 +50,8 @@ export default async function createRequestElement(request, order) {
   titleElement.className = "title";
   titleElement.title = config.title;
   titleElement.textContent = config.title;
-  titleElement.href = config.link;
-  titleElement.target = "_blank";
+  titleElement.href = config.link || "#";
+  titleElement.target = config.link ? "_blank" : "_self";
   rightElements.appendChild(titleElement);
 
   const rightBottomElement = document.createElement("div");
