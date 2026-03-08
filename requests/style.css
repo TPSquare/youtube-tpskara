@@ -23,7 +23,7 @@ main {
   width: 21.5em;
   height: 100%;
   padding: 2.85em 1.4em;
-  border-right: 1px solid #ffffff33;
+  border-right: 2px solid #ffffff33;
   overflow-y: auto;
   background-color: #0f0f0f;
   z-index: 10;
@@ -81,7 +81,7 @@ main {
 }
 
 #about .divider {
-  height: 1px;
+  height: 2px;
   background-color: #ffffff33;
   margin-bottom: 1.71em;
 }
@@ -115,12 +115,13 @@ main {
   font-size: 16px;
   flex: 1;
   overflow-y: auto;
-  padding: 1.25em;
+  padding-inline: 1.25em;
+  padding-top: 2em;
   padding-bottom: 5em;
 }
 
 #requests .divider {
-  height: 1px;
+  height: 2px;
   background-color: #ffffff33;
   margin-bottom: 1.5em;
   margin-top: 0.625em;
@@ -135,11 +136,6 @@ main {
 
 #requests .informations {
   color: #aaaaaa;
-  line-height: 1.5em;
-}
-
-#requests .informations.light {
-  color: #cfcfcf;
 }
 
 #requests .informations > div {
@@ -148,29 +144,6 @@ main {
 
 #requests .informations a {
   color: dodgerblue;
-}
-
-#requests .informations ul {
-  margin-left: 2em;
-  list-style-type: none;
-}
-
-#requests .informations li {
-  margin-bottom: 0.1em;
-}
-
-#requests .informations li::before {
-  content: "-";
-  margin-right: 0.75em;
-}
-
-#requests .informations li.note {
-  margin-left: 2em;
-  font-style: italic;
-}
-
-#requests .informations li.note::before {
-  content: none;
 }
 
 #requests-list .request {
@@ -185,7 +158,7 @@ main {
 }
 
 #requests-list .request:not(:first-child) {
-  border-top: 1px solid #ffffff33;
+  border-top: 2px solid #ffffff33;
 }
 
 #requests-list .request .order {
