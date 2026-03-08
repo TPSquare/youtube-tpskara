@@ -116,7 +116,7 @@ main {
   flex: 1;
   overflow-y: auto;
   padding: 1.25em;
-  padding-bottom: 2em;
+  padding-bottom: 5em;
 }
 
 #requests .divider {
