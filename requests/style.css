@@ -135,14 +135,42 @@ main {
 
 #requests .informations {
   color: #aaaaaa;
+  line-height: 1.5em;
+}
+
+#requests .informations.light {
+  color: #cfcfcf;
 }
 
 #requests .informations > div {
-  margin-bottom: 0.625em;
+  margin-bottom: 0.5em;
 }
 
 #requests .informations a {
   color: dodgerblue;
+}
+
+#requests .informations ul {
+  margin-left: 2em;
+  list-style-type: none;
+}
+
+#requests .informations li {
+  margin-bottom: 0.1em;
+}
+
+#requests .informations li::before {
+  content: "-";
+  margin-right: 0.75em;
+}
+
+#requests .informations li.note {
+  margin-left: 2em;
+  font-style: italic;
+}
+
+#requests .informations li.note::before {
+  content: none;
 }
 
 #requests-list .request {
@@ -234,7 +262,7 @@ main {
 
 #requests-list .request .remaining {
   background-color: #272727;
-  color: #2A8F3B;
+  color: #2a8f3b;
 }
 
 #requests-list .request .remaining::before {
