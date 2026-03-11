@@ -1,5 +1,6 @@
 import getVideoData from "./get-video-data.js";
 import calculateTheRemainingTime from "./calculate-the-remaining-time.js";
+import environment from "../../configs/environment.js";
 
 const requestsListElement = document.getElementById("requests-list");
 const remainingKeys = {
@@ -24,12 +25,13 @@ export default async function createRequestElement(request, order) {
     date: request.date, // dd/mm/yyyy
   };
   if (request.youtubeID) {
-    const { snippet } = await getVideoData(request.youtubeID);
-    config.title = snippet.title;
-    config.thumbnailUrl = snippet.thumbnails.medium.url;
-    config.link =
-      "https://www.youtube.com/results?search_query=" +
-      encodeURIComponent(snippet.title).replace(/%20/g, "+");
+    const videoData = await getVideoData(request.youtubeID);
+    config.title = videoData.title;
+    config.thumbnailUrl = videoData.thumbnailUrl;
+    if (environment !== "development")
+      config.link =
+        "https://www.youtube.com/results?search_query=" +
+        encodeURIComponent(videoData.title).replace(/%20/g, "+");
   }
 
   const orderElement = document.createElement("div");
@@ -38,7 +40,8 @@ export default async function createRequestElement(request, order) {
   requestElement.appendChild(orderElement);
 
   const thumbnailElement = document.createElement("img");
-  thumbnailElement.src = config.thumbnailUrl;
+  thumbnailElement.src =
+    config.thumbnailUrl || "https://tse4.mm.bing.net/th/id/OIP._k-Rbbqjzn5_zofRRV46YgHaEh";
   thumbnailElement.alt = config.title;
   requestElement.appendChild(thumbnailElement);
 
@@ -65,11 +68,15 @@ export default async function createRequestElement(request, order) {
     rightBottomElement.appendChild(requestTextElement);
   }
 
+  const floatElement = document.createElement("div");
+  floatElement.className = "float";
+  requestElement.appendChild(floatElement);
+
   if (config.priority) {
     const priorityElement = document.createElement("div");
     priorityElement.className = "priority";
     priorityElement.innerHTML = config.priority.replaceAll(" ", "&nbsp;");
-    requestElement.appendChild(priorityElement);
+    floatElement.appendChild(priorityElement);
   }
 
   if (config.date) {
@@ -80,7 +87,7 @@ export default async function createRequestElement(request, order) {
     } else {
       const remainingElement = document.createElement("div");
       remainingElement.className = "remaining";
-      requestElement.appendChild(remainingElement);
+      floatElement.appendChild(remainingElement);
 
       const keyInUsed = Object.keys(remainingKeys).find((key) => remainingData[key] > 0);
       remainingElement.textContent = `${remainingData[keyInUsed]} ${remainingKeys[keyInUsed]}`;

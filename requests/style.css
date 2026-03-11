@@ -217,15 +217,19 @@ main {
   margin-bottom: 0.2em;
 }
 
-#requests-list .request .priority,
-#requests-list .request .remaining {
+#requests-list .request .float {
   position: absolute;
+  display: flex;
   font-size: 0.9em;
   font-weight: 500;
   right: 0;
+}
+
+#requests-list .request .float > * {
   padding: 0.1em 0.4em;
   border-radius: 0.25em;
   box-shadow: 0 0 1em 0.5em black;
+  margin-left: 0.5em;
 }
 
 #requests-list .request .priority {

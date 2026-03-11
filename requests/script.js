@@ -1,12 +1,13 @@
+import environment from "../configs/environment.js";
 (async () => {
+  if (environment === "development") return;
   const api = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC-_m5GLVvVOEUYkTknhdjzw&key=AIzaSyDJvCeWiQP8gLQCiZGoQAOQvE9F-e1LIy8`;
   const channelData = await fetch(api).then((res) => res.json());
   const statistics = channelData.items[0].statistics;
   const { viewCount, subscriberCount, videoCount } = statistics;
   const aboutElement = document.getElementById("about");
-  aboutElement.querySelector(
-    ".label.subscribers .text"
-  ).textContent = `${subscriberCount} người đăng ký`;
+  aboutElement.querySelector(".label.subscribers .text").textContent =
+    `${subscriberCount} người đăng ký`;
   aboutElement.querySelector(".label.videos .text").textContent = `${videoCount} video`;
   aboutElement.querySelector(".label.views .text").textContent = `${viewCount} lượt xem`;
 })();
