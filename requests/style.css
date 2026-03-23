@@ -239,12 +239,7 @@ main {
 
 #requests-list .request .remaining {
   background-color: #272727;
-  color: #2a8f3b;
-}
-
-#requests-list .request .remaining::before {
-  content: "⏱ ";
-  font-weight: 900;
+  color: #2eb144;
 }
 
 #requests-list .empty {
