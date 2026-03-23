@@ -242,6 +242,11 @@ main {
   color: #2eb144;
 }
 
+#requests-list .request .done {
+  background-color: #38AE47;
+  color: #f1f1f1;
+}
+
 #requests-list .empty {
   font-size: 1.125em;
   color: #aaaaaa;

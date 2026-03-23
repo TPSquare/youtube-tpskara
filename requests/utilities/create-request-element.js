@@ -22,7 +22,8 @@ export default async function createRequestElement(request, order) {
     link: request.link,
     request: request.requestText,
     priority: request.priority,
-    date: request.date, // dd/mm/yyyy
+    date: request.date, // dd/mm/yyyy,
+    done: request.done || false,
   };
   if (request.youtubeID) {
     const videoData = await getVideoData(request.youtubeID);
@@ -105,5 +106,12 @@ export default async function createRequestElement(request, order) {
         }, 1000);
       }
     }
+  }
+
+  if (config.done) {
+    const doneElement = document.createElement("div");
+    doneElement.className = "done";
+    doneElement.textContent = "✔";
+    floatElement.appendChild(doneElement);
   }
 }
