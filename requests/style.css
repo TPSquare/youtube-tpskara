@@ -228,7 +228,7 @@ main {
 #requests-list .request .float > * {
   padding: 0.1em 0.4em;
   border-radius: 0.25em;
-  box-shadow: 0 0 1em 0.5em black;
+  box-shadow: 0 0.5em 1em 0.1em black;
   margin-left: 0.5em;
 }
 
