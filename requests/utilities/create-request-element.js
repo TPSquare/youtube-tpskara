@@ -112,6 +112,7 @@ export default async function createRequestElement(request, order) {
     const doneElement = document.createElement("div");
     doneElement.className = "done";
     doneElement.textContent = "✔";
+    doneElement.title = "Video đã được hoàn thành!";
     floatElement.appendChild(doneElement);
   }
 }
