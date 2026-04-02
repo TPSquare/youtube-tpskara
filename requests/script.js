@@ -7,11 +7,11 @@ import environment from "../configs/environment.js";
   const { viewCount, subscriberCount, videoCount } = statistics;
   const aboutElement = document.getElementById("about");
   aboutElement.querySelector(".label.subscribers .text").textContent =
-    `${subscriberCount.toLocaleString("vi-VN")} người đăng ký`;
+    `${Number(subscriberCount).toLocaleString("vi-VN")} người đăng ký`;
   aboutElement.querySelector(".label.videos .text").textContent =
-    `${videoCount.toLocaleString("vi-VN")} video`;
+    `${Number(videoCount).toLocaleString("vi-VN")} video`;
   aboutElement.querySelector(".label.views .text").textContent =
-    `${viewCount.toLocaleString("vi-VN")} lượt xem`;
+    `${Number(viewCount).toLocaleString("vi-VN")} lượt xem`;
 })();
 
 import createRequestElement from "./utilities/create-request-element.js";
