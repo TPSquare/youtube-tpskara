@@ -29,10 +29,7 @@ export default async function createRequestElement(request, order) {
     const videoData = await getVideoData(request.youtubeID);
     config.title = videoData.title;
     config.thumbnailUrl = videoData.thumbnailUrl;
-    if (environment !== "development")
-      config.link =
-        "https://www.youtube.com/results?search_query=" +
-        encodeURIComponent(videoData.title).replace(/%20/g, "+");
+    if (environment !== "development") config.link = `https://youtu.be/${request.youtubeID}`;
   }
 
   const orderElement = document.createElement("div");
