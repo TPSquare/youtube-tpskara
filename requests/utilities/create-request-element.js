@@ -1,6 +1,7 @@
 import getVideoData from "./get-video-data.js";
 import calculateTheRemainingTime from "./calculate-the-remaining-time.js";
 import environment from "../../configs/environment.js";
+import dateStringToObject from "./date-string-to-object.js";
 
 const requestsListElement = document.getElementById("requests-list");
 const remainingKeys = {
@@ -10,7 +11,18 @@ const remainingKeys = {
   seconds: "giây",
 };
 
+const getRequestKey = (request) => request.youtubeID || request.link.slice(0, 50) + "...";
+
 export default async function createRequestElement(request, order) {
+  if (request.uploadDate) {
+    const uploadDate = dateStringToObject(request.uploadDate);
+    const now = new Date();
+    if (now > uploadDate) {
+      console.error(`\`${getRequestKey(request)}\` is uploaded!`);
+      return;
+    }
+  }
+
   const requestElement = document.createElement("div");
   requestElement.className = "request";
   requestsListElement.appendChild(requestElement);
@@ -22,7 +34,8 @@ export default async function createRequestElement(request, order) {
     link: request.link,
     request: request.requestText,
     priority: request.priority,
-    date: request.date, // dd/mm/yyyy,
+    date: request.date, // hh:mm dd/mm/yyyy
+    uploadDate: request.uploadDate, // hh:mm dd/mm/yyyy
     done: request.done || false,
   };
   if (request.youtubeID) {
@@ -80,8 +93,9 @@ export default async function createRequestElement(request, order) {
   if (config.date) {
     const remainingData = calculateTheRemainingTime(config.date, 30);
     if (remainingData.isExpired) {
-      console.error(`\`${request.youtubeID || request.link.slice(0, 50) + "..."}\` is expired!`);
+      console.error(`\`${getRequestKey(request)}\` is expired!`);
       requestsListElement.removeChild(requestElement);
+      return;
     } else {
       const remainingElement = document.createElement("div");
       remainingElement.className = "remaining";

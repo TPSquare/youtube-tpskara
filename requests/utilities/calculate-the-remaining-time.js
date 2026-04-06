@@ -1,14 +1,7 @@
-export default function calculateTheRemainingTime(dateString = "hh:mm dd/mm/yyyy", daysToAdd) {
-  const [timeParts, dayParts] = dateString.split(" ");
-  const timeSegments = timeParts.split(":");
-  const daySegments = dayParts.split("/");
-  const hour = parseInt(timeSegments[0], 10);
-  const minute = parseInt(timeSegments[1], 10);
-  const day = parseInt(daySegments[0], 10);
-  const month = parseInt(daySegments[1], 10) - 1;
-  const year = parseInt(daySegments[2], 10);
+import dateStringToObject from "./date-string-to-object.js";
 
-  const startDate = new Date(year, month, day, hour, minute);
+export default function calculateTheRemainingTime(dateString = "hh:mm dd/mm/yyyy", daysToAdd) {
+  const startDate = dateStringToObject(dateString);
   const targetDate = new Date(startDate);
   targetDate.setDate(startDate.getDate() + daysToAdd);
 
