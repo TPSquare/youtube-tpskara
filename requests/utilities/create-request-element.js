@@ -3,14 +3,15 @@ import calculateTheRemainingTime from "./calculate-the-remaining-time.js";
 import environment from "../../configs/environment.js";
 import dateStringToObject from "./date-string-to-object.js";
 
-const requestsListElement = document.getElementById("requests-list");
-const remainingKeys = {
+const EXPIRATION = 30;
+const REMAINING_KEYS = {
   days: "ngày",
   hours: "giờ",
   minutes: "phút",
   seconds: "giây",
 };
 
+const requestsListElement = document.getElementById("requests-list");
 const getRequestKey = (request) => request.youtubeID || request.link.slice(0, 50) + "...";
 
 export default async function createRequestElement(request, order) {
@@ -18,7 +19,7 @@ export default async function createRequestElement(request, order) {
     const uploadDate = dateStringToObject(request.uploadDate);
     const now = new Date();
     if (now > uploadDate) {
-      console.error(`\`${getRequestKey(request)}\` is uploaded!`);
+      console.warn(`\`${getRequestKey(request)}\` is uploaded!`);
       return;
     }
   }
@@ -36,7 +37,6 @@ export default async function createRequestElement(request, order) {
     priority: request.priority,
     date: request.date, // hh:mm dd/mm/yyyy
     uploadDate: request.uploadDate, // hh:mm dd/mm/yyyy
-    done: request.done || false,
   };
   if (request.youtubeID) {
     const videoData = await getVideoData(request.youtubeID);
@@ -91,9 +91,9 @@ export default async function createRequestElement(request, order) {
   }
 
   if (config.date) {
-    const remainingData = calculateTheRemainingTime(config.date, 30);
+    const remainingData = calculateTheRemainingTime(config.date, EXPIRATION);
     if (remainingData.isExpired) {
-      console.error(`\`${getRequestKey(request)}\` is expired!`);
+      console.warn(`\`${getRequestKey(request)}\` is expired!`);
       requestsListElement.removeChild(requestElement);
       return;
     } else {
@@ -101,8 +101,11 @@ export default async function createRequestElement(request, order) {
       remainingElement.className = "remaining";
       floatElement.appendChild(remainingElement);
 
-      const keyInUsed = Object.keys(remainingKeys).find((key) => remainingData[key] > 0);
-      remainingElement.textContent = `${remainingData[keyInUsed]} ${remainingKeys[keyInUsed]}`;
+      const keyInUsed = Object.keys(REMAINING_KEYS).find((key) => remainingData[key] > 0);
+
+      remainingElement.textContent = `${remainingData[keyInUsed]} ${REMAINING_KEYS[keyInUsed]}`;
+      if (remainingData.days === EXPIRATION - 1)
+        remainingElement.textContent += ` ${remainingData.hours} ${REMAINING_KEYS.hours}`;
       remainingElement.title = `Yêu cầu của bạn sẽ hết hạn sau ${remainingElement.textContent} nữa!`;
 
       if (keyInUsed === "seconds") {
@@ -113,17 +116,17 @@ export default async function createRequestElement(request, order) {
             requestsListElement.removeChild(requestElement);
             clearInterval(countdownID);
           }
-          remainingElement.textContent = `${--remainingSeconds} ${remainingKeys.seconds}`;
+          remainingElement.textContent = `${--remainingSeconds} ${REMAINING_KEYS.seconds}`;
         }, 1000);
       }
     }
   }
 
-  if (config.done) {
+  if (config.uploadDate) {
     const doneElement = document.createElement("div");
     doneElement.className = "done";
-    doneElement.textContent = "✔";
-    doneElement.title = "Video đã được hoàn thành!";
+    doneElement.textContent = config.uploadDate;
+    doneElement.title = `Video sẽ được đăng tải vào lúc ${config.uploadDate}!`;
     floatElement.appendChild(doneElement);
   }
 }
