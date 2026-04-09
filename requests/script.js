@@ -17,7 +17,7 @@ import environment from "../configs/environment.js";
 import createRequestElement from "./utilities/create-request-element.js";
 (async () => {
   const requestsListElement = document.getElementById("requests-list");
-  const requests = await fetch(`./requests.json?time=${Date.now()}`)
+  const requests = await fetch(`./requests.json?t=${Date.now()}`)
     .then((res) => res.json())
     .then((reqs) => reqs.map(({ request, ...rest }) => ({ requestText: request, ...rest })));
 

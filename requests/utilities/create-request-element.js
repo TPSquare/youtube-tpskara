@@ -104,7 +104,7 @@ export default async function createRequestElement(request, order) {
       const keyInUsed = Object.keys(REMAINING_KEYS).find((key) => remainingData[key] > 0);
 
       remainingElement.textContent = `${remainingData[keyInUsed]} ${REMAINING_KEYS[keyInUsed]}`;
-      if (remainingData.days === EXPIRATION - 1)
+      if (remainingData.days === EXPIRATION - 1 && remainingData.hours !== 0)
         remainingElement.textContent += ` ${remainingData.hours} ${REMAINING_KEYS.hours}`;
       remainingElement.title = `Yêu cầu của bạn sẽ hết hạn sau ${remainingElement.textContent} nữa!`;
 
