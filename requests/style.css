@@ -117,7 +117,10 @@ main {
   overflow-y: auto;
   padding-inline: 1.25em;
   padding-top: 2em;
-  padding-bottom: 400px;
+}
+
+#requests .margin {
+  height: 100px;
 }
 
 #requests .divider {
@@ -243,7 +246,7 @@ main {
 }
 
 #requests-list .request .done {
-  background-color: #38AE47;
+  background-color: #38ae47;
   color: #f1f1f1;
 }
 

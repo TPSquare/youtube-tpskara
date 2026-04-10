@@ -14,7 +14,7 @@ const REMAINING_KEYS = {
 const requestsListElement = document.getElementById("requests-list");
 const getRequestKey = (request) => request.youtubeID || request.link.slice(0, 50) + "...";
 
-export default async function createRequestElement(request, order) {
+export default async function createRequestElement(request, refreshRequestOrder) {
   if (request.uploadDate) {
     const uploadDate = dateStringToObject(request.uploadDate);
     const now = new Date();
@@ -47,7 +47,6 @@ export default async function createRequestElement(request, order) {
 
   const orderElement = document.createElement("div");
   orderElement.className = "order";
-  orderElement.textContent = order;
   requestElement.appendChild(orderElement);
 
   const thumbnailElement = document.createElement("img");
@@ -114,6 +113,7 @@ export default async function createRequestElement(request, order) {
         const countdownID = setInterval(() => {
           if (remainingSeconds <= 0) {
             requestsListElement.removeChild(requestElement);
+            refreshRequestOrder();
             clearInterval(countdownID);
           }
           remainingElement.textContent = `${--remainingSeconds} ${REMAINING_KEYS.seconds}`;

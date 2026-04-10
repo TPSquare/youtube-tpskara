@@ -15,15 +15,19 @@ import environment from "../configs/environment.js";
 })();
 
 import createRequestElement from "./utilities/create-request-element.js";
+import refreshRequestOrder from "./utilities/refresh-request-order.js";
 (async () => {
   const requestsListElement = document.getElementById("requests-list");
   const requests = await fetch(`./requests.json?t=${Date.now()}`)
     .then((res) => res.json())
     .then((reqs) => reqs.map(({ request, ...rest }) => ({ requestText: request, ...rest })));
 
-  if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
 
-  for (let i = 0; i < requests.length; i++) createRequestElement(requests[i], i + 1);
+  const requestPromises = requests.map((req) => createRequestElement(req, refreshRequestOrder));
+  await Promise.all(requestPromises);
+  refreshRequestOrder();
+  if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
+  requestsListElement.appendChild(requestsListElement.querySelector(".margin"));
 })();
 
 (() => {

@@ -1,31 +1,45 @@
 const sensitiveMap = await fetch(`./sensitive-map.json?t=${Date.now()}`).then((res) => res.json());
 
-const inputTextarea = document.getElementById("input");
-const outputTextarea = document.getElementById("output");
+const textarea = document.getElementById("input");
 const standardizeBtn = document.body.querySelector("#standardize-btn-wrapper button");
 
 standardizeBtn.onclick = () => {
-  outputTextarea.value = inputTextarea.value;
   Standardize.separatedIntoLines();
   Standardize.disguiseSensitiveWords();
 };
 
 class Standardize {
   static separatedIntoLines() {
-    const value = outputTextarea.value;
-    outputTextarea.value = value.split(/\s+(?=\p{Lu})/u).join("\n");
+    const res = [];
+    const rawLine = textarea.value.split("\n");
+    for (let value of rawLine) {
+      let i = 0;
+      while (value.length > 0) {
+        ++i;
+        if (i >= value.length) {
+          res.push(value);
+          break;
+        } else if (value[i].toLowerCase() !== value[i]) {
+          if (value[i - 1] !== " " && value[i - 1].toLowerCase() !== value[i - 1]) continue;
+          res.push(value.slice(0, i));
+          value = value.slice(i);
+          i = 0;
+        }
+      }
+    }
+    textarea.value = res.join("\n");
   }
 
   static disguiseSensitiveWords() {
-    const value = outputTextarea.value;
-    const pattern = new RegExp(Object.keys(sensitiveMap).join("|"), "gi");
-    outputTextarea.value = value.replace(pattern, (matched) => {
-      const replacement = sensitiveMap[matched.toLowerCase()];
-      if (!replacement) return matched;
-      if (matched === matched.toUpperCase()) return replacement.toUpperCase();
-      if (matched[0] === matched[0].toUpperCase())
-        return replacement.charAt(0).toUpperCase() + replacement.slice(1);
-      return replacement.toLowerCase();
-    });
+    const res = textarea.value.split("");
+    const lowerText = textarea.value.toLowerCase();
+    for (const key in sensitiveMap) {
+      let pos = lowerText.indexOf(key);
+      while (pos !== -1) {
+        for (const index of sensitiveMap[key]) res[pos + index] = "*";
+        pos = lowerText.indexOf(key, pos + 1);
+      }
+    }
+    textarea.value = res.join("");
   }
 }
