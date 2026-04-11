@@ -12,14 +12,14 @@ const REMAINING_KEYS = {
 };
 
 const requestsListElement = document.getElementById("requests-list");
-const getRequestKey = (request) => request.youtubeID || request.link.slice(0, 50) + "...";
+const consoleLogRequestNote = (index, note) => console.log(`>>> Line ${index + 2} is ${note}!`);
 
-export default async function createRequestElement(request, refreshRequestOrder) {
+export default async function createRequestElement(request, index, refreshRequestOrder) {
   if (request.uploadDate) {
     const uploadDate = dateStringToObject(request.uploadDate);
     const now = new Date();
     if (now > uploadDate) {
-      console.warn(`\`${getRequestKey(request)}\` is uploaded!`);
+      consoleLogRequestNote(index, "uploaded");
       return;
     }
   }
@@ -92,7 +92,7 @@ export default async function createRequestElement(request, refreshRequestOrder)
   if (config.date) {
     const remainingData = calculateTheRemainingTime(config.date, EXPIRATION);
     if (remainingData.isExpired) {
-      console.warn(`\`${getRequestKey(request)}\` is expired!`);
+      consoleLogRequestNote(index, "expired");
       requestsListElement.removeChild(requestElement);
       return;
     } else {
