@@ -12,7 +12,7 @@ const REMAINING_KEYS = {
 };
 
 const requestsListElement = document.getElementById("requests-list");
-const consoleLogRequestNote = (index, note) => console.log(`>>> Line ${index + 2} is ${note}!`);
+const consoleLogRequestNote = (index, note) => console.warn(`>>> Line ${index + 2} is ${note}!`);
 
 export default async function createRequestElement(request, index, refreshRequestOrder) {
   if (request.uploadDate) {
