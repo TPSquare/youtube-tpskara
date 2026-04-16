@@ -12,14 +12,18 @@ const REMAINING_KEYS = {
 };
 
 const requestsListElement = document.getElementById("requests-list");
-const consoleLogRequestNote = (index, note) => console.warn(`>>> Line ${index + 2} is ${note}!`);
+const logRequestNote = (index, note) => {
+  const log = `>>> Line ${index + 2} is ${note}!`;
+  if (environment === "development") alert(log);
+  else console.warn(log);
+};
 
 export default async function createRequestElement(request, index, refreshRequestOrder) {
   if (request.uploadDate) {
     const uploadDate = dateStringToObject(request.uploadDate);
     const now = new Date();
     if (now > uploadDate) {
-      consoleLogRequestNote(index, "uploaded");
+      logRequestNote(index, "uploaded");
       return;
     }
   }
@@ -92,7 +96,7 @@ export default async function createRequestElement(request, index, refreshReques
   if (config.date) {
     const remainingData = calculateTheRemainingTime(config.date, EXPIRATION);
     if (remainingData.isExpired) {
-      consoleLogRequestNote(index, "expired");
+      logRequestNote(index, "expired");
       requestsListElement.removeChild(requestElement);
       return;
     } else {
