@@ -38,7 +38,7 @@ export default async function createRequestElement(request, index, refreshReques
     thumbnailUrl: request.thumbnailUrl,
     link: request.link,
     request: request.requestText,
-    priority: request.priority,
+    priorities: request.priorities || (request.priority ? [request.priority] : undefined),
     date: request.date, // hh:mm dd/mm/yyyy
     uploadDate: request.uploadDate, // hh:mm dd/mm/yyyy
   };
@@ -86,11 +86,13 @@ export default async function createRequestElement(request, index, refreshReques
   floatElement.className = "float";
   requestElement.appendChild(floatElement);
 
-  if (config.priority) {
-    const priorityElement = document.createElement("div");
-    priorityElement.className = "priority";
-    priorityElement.innerHTML = config.priority.replaceAll(" ", "&nbsp;");
-    floatElement.appendChild(priorityElement);
+  if (config.priorities) {
+    for (const priority of config.priorities) {
+      const priorityElement = document.createElement("div");
+      priorityElement.className = "priority";
+      priorityElement.innerHTML = priority.replaceAll(" ", "&nbsp;");
+      floatElement.appendChild(priorityElement);
+    }
   }
 
   if (config.date) {
