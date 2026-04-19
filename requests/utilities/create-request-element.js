@@ -12,6 +12,7 @@ const REMAINING_KEYS = {
 };
 
 const requestsListElement = document.getElementById("requests-list");
+
 const logRequestNote = (index, note) => {
   const log = `>>> Line ${index + 2} is ${note}!`;
   if (environment === "development") alert(log);
@@ -43,6 +44,7 @@ export default async function createRequestElement(request, index, refreshReques
     uploadDate: request.uploadDate, // hh:mm dd/mm/yyyy
   };
   if (request.youtubeID) {
+    requestElement.onclick = () => console.log(request.youtubeID);
     const videoData = await getVideoData(request.youtubeID);
     config.title = videoData.title;
     config.thumbnailUrl = videoData.thumbnailUrl;
