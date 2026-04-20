@@ -70,7 +70,6 @@ export default async function createRequestElement(request, index, refreshReques
   titleElement.title = config.title;
   titleElement.textContent = config.title;
   titleElement.href = config.link || "#";
-  titleElement.target = config.link ? "_blank" : "_self";
   rightElements.appendChild(titleElement);
 
   const rightBottomElement = document.createElement("div");
