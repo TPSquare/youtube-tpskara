@@ -1,5 +1,5 @@
 [
-  { "youtubeID": "l7puHkk8YBA", "date": "20:05 04/04/2026", "note": "@duythai9132" },
+  { "youtubeID": "l7puHkk8YBA", "uploadDate": "6:00 26/04/2026", "note": "@duythai9132" },
   { "youtubeID": "7UWOA9Afbxw", "date": "21:08 30/03/2026", "note": "@DanhNguyen-ki8fp" },
   { "youtubeID": "dckk4cATOqM", "date": "21:09 30/03/2026", "note": "@BảoPhạmViệtGia" },
   { "youtubeID": "FC3NTgFi9Ew", "date": "13:29 23/04/2026", "note": "@hoangminhle8333" },
@@ -10,10 +10,10 @@
   { "youtubeID": "E64bsWgs8_w", "date": "22:08 07/04/2026", "note": "@kaimimigm9862" },
   { "youtubeID": "nAvmPdtX9JE", "date": "12:17 06/04/2026", "request": "Có hook", "note": "@duongnguyenquanghuy1754" },
   { "youtubeID": "HTpP9LVVoNs", "date": "12:19 06/04/2026", "note": "@Ceaser555" },
-  { "youtubeID": "dz6xe0xXqYE", "date": "12:21 06/04/2026", "request": "Rõ lời", "note": "@laitruong7922" },
-  { "youtubeID": "M7UlJ0m-yy4", "date": "12:24 06/04/2026", "request": "Rõ lời", "note": "@laitruong7922" },
+  { "youtubeID": "dz6xe0xXqYE", "date": "12:21 06/04/2026", "note": "@laitruong7922" },
+  { "youtubeID": "M7UlJ0m-yy4", "date": "12:24 06/04/2026", "note": "@laitruong7922" },
   { "youtubeID": "vdX6DwxyVvc", "date": "23:23 06/04/2026", "note": "@laitruong7922" },
-  { "youtubeID": "3uyno09gQLw", "date": "23:24 06/04/2026", "request": "Dễ nhìn", "note": "@laitruong7922" },
+  { "youtubeID": "3uyno09gQLw", "date": "23:24 06/04/2026", "note": "@laitruong7922" },
   { "youtubeID": "c8jOjMTNo0U", "date": "22:06 07/04/2026", "note": "@QuocanhLe-ie5sq" },
   { "youtubeID": "R47YwUQvgBI", "date": "21:32 08/04/2026", "note": "@YunoSmallBoy" },
   { "youtubeID": "OGQsXBl1SPg", "date": "22:30 09/04/2026", "note": "@at-sn7ny" },
@@ -29,5 +29,7 @@
   { "youtubeID": "_hS33cHtK-E", "date": "22:46 20/04/2026", "note": "@ThaoThanh-ck1lq" },
   { "youtubeID": "dx7Mfjg2TC0", "date": "18:31 22/04/2026", "note": "@tienquang690" },
   { "youtubeID": "7C9XPAzk6jY", "date": "11:29 25/04/2026", "note": "@GiaBaoNguyenTran-oz6tr" },
-  { "youtubeID": "OAP2Y0ooiKo", "date": "11:29 25/04/2026", "note": "@minhtruonghoang2995" }
+  { "youtubeID": "OAP2Y0ooiKo", "date": "11:29 25/04/2026", "note": "@minhtruonghoang2995" },
+  { "youtubeID": "4ZFezhS5hZs", "date": "21:40 25/04/2026", "note": "@trongtantran2028" },
+  { "youtubeID": "5PvzGDU8WjM", "date": "21:43 25/04/2026", "note": "@trongtantran2028" }
 ]

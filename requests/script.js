@@ -23,14 +23,10 @@ import refreshOrder from "./utilities/refresh-request-order.js";
     .then((reqs) => reqs.map(({ request, ...rest }) => ({ requestText: request, ...rest })));
 
   if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
-  const marginElement = document.createElement("div");
-  marginElement.className = "margin";
 
   const requestPromises = requests.map((req, i) => createRequestElement(req, i, refreshOrder));
   await Promise.all(requestPromises);
   refreshOrder();
-
-  requestsListElement.appendChild(marginElement);
 })();
 
 (() => {
