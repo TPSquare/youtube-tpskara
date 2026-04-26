@@ -112,10 +112,10 @@ export default async function createRequestElement(request, index, refreshReques
       remainingElement.textContent = `${remainingData[keyInUsed]} ${REMAINING_KEYS[keyInUsed]}`;
       if (remainingData.days === EXPIRATION - 1 && remainingData.hours !== 0)
         remainingElement.textContent += ` ${remainingData.hours} ${REMAINING_KEYS.hours}`;
-      remainingElement.title = `Yêu cầu của bạn sẽ hết hạn sau ${remainingElement.textContent} nữa!`;
+      remainingElement.title = `Yêu cầu sẽ hết hạn sau ${remainingElement.textContent} nữa!`;
 
       if (keyInUsed === "seconds") {
-        remainingElement.title = `Yêu cầu của bạn sẽ hết hạn sau chưa đầy 1 phút nữa!`;
+        remainingElement.title = `Yêu cầu sẽ hết hạn sau chưa đầy 1 phút nữa!`;
         let remainingSeconds = remainingData.seconds;
         const countdownID = setInterval(() => {
           if (remainingSeconds <= 0) {
