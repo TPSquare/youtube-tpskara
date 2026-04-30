@@ -13,11 +13,7 @@ const REMAINING_KEYS = {
 
 const requestsListElement = document.getElementById("requests-list");
 
-const logRequestNote = (index, note) => {
-  const log = `>>> Line ${index + 2} is ${note}!`;
-  if (environment === "development") alert(log);
-  else console.warn(log);
-};
+const logRequestNote = (index, note) => console.warn(`>>> Line ${index + 2} is ${note}!`);
 
 export default async function createRequestElement(request, index, refreshRequestOrder) {
   if (request.uploadDate) {
