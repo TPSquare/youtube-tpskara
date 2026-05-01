@@ -5,7 +5,9 @@
   "listOfRequests": "Request list",
   "notesToListOfRequests": [],
   "emptyOfRequests": "There are currently no requests recorded on the TPSKara channel",
-  "changeLanguage": "Change language",
+  "subscribers": "Subscribers",
+  "videos": "Videos",
+  "views": "Views",
   "requestElement": {
     "request": "Request",
     "expireRequest": "The request will expire in {Xday}",

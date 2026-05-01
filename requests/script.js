@@ -18,7 +18,6 @@ const language = await fetch(languageApi).then((res) => res.json());
   insertText("#about .footer", language.thank);
   insertText("#requests > .title", language.listOfRequests.toUpperCase() + ":");
   insertText("#requests-list .empty", language.emptyOfRequests + "...");
-  insertText("#tool-bar .change-language", language.changeLanguage);
 
   const insertHTML = (query, html) => (document.body.querySelector(query).innerHTML = html);
   const notesToListOfRequestsHTML = language.notesToListOfRequests.map((e) => `<div>${e}</div>`);
@@ -34,11 +33,11 @@ import environment from "../internal/configs/environment.js";
   const { viewCount, subscriberCount, videoCount } = statistics;
   const aboutElement = document.getElementById("about");
   aboutElement.querySelector(".label.subscribers .text").textContent =
-    `${Number(subscriberCount).toLocaleString("vi-VN")} người đăng ký`;
+    `${Number(subscriberCount).toLocaleString("vi-VN")} ${language.subscribers}`;
   aboutElement.querySelector(".label.videos .text").textContent =
-    `${Number(videoCount).toLocaleString("vi-VN")} video`;
+    `${Number(videoCount).toLocaleString("vi-VN")} ${language.videos}`;
   aboutElement.querySelector(".label.views .text").textContent =
-    `${Number(viewCount).toLocaleString("vi-VN")} lượt xem`;
+    `${Number(viewCount).toLocaleString("vi-VN")} ${language.views}`;
 })();
 
 import createRequestElement from "./utilities/create-request-element.js";
