@@ -1,11 +1,13 @@
 [
   { "youtubeID": "FC3NTgFi9Ew", "date": "13:29 23/04/2026", "note": "@hoangminhle8333" },
-  { "youtubeID": "0za6YLO5mhU", "priority": "Mới", "note": "Ronaldinho6789" },
-  { "youtubeID": "UUGScGFbPxk", "priority": "Mới", "note": "laitruong7922" },
+  { "youtubeID": "0za6YLO5mhU", "priority": "Mới", "date": "13:20 30/04/2026", "note": "@Ronaldinho6789" },
+  { "youtubeID": "UUGScGFbPxk", "priority": "Mới", "date": "13:20 30/04/2026", "note": "@laitruong7922" },
   { "youtubeID": "yTj9Owe40do", "date": "10:00 26/04/2026", "request": "Tone nữ", "note": "@motnguoi12345" },
-  { "youtubeID": "umMQf9spwMw", "priority": "Mới", "note": "laitruong7922" },
+  { "youtubeID": "umMQf9spwMw", "priority": "Mới", "date": "13:20 30/04/2026", "note": "@laitruong7922" },
   { "youtubeID": "YhOT6FTC7HM", "date": "12:51 26/04/2026", "request": "Bè full bài", "note": "@trmquy" },
+  { "youtubeID": "ryzP7UqdvBc", "priority": "New", "date": "13:20 01/05/2026", "note": "@Mrminion1764" },
   { "youtubeID": "-xS7LoAkYL0", "date": "23:16 02/04/2026", "note": "@destdie" },
+  { "youtubeID": "3gOINvQo7Qc", "priority": "Mới", "date": "13:21 01/05/2026", "note": "@kaimimigm9862" },
   { "youtubeID": "kMbCYuWyxCM", "date": "22:09 07/04/2026", "note": "@tungnguynakajustinh @Candle2804" },
   { "youtubeID": "E64bsWgs8_w", "date": "22:08 07/04/2026", "note": "@kaimimigm9862" },
   { "youtubeID": "nAvmPdtX9JE", "date": "12:17 06/04/2026", "request": "Có hook", "note": "@duongnguyenquanghuy1754" },
@@ -34,5 +36,6 @@
   { "youtubeID": "5PvzGDU8WjM", "date": "21:43 25/04/2026", "note": "@trongtantran2028" },
   { "youtubeID": "1qPDgh6ntkE", "date": "22:37 26/04/2026", "note": "@Keane-d1r" },
   { "youtubeID": "EScG2G9JV1U", "date": "21:08 27/04/2026", "note": "@AntoineLe20" },
-  { "youtubeID": "O_vzVAKTsV8", "date": "12:58 30/04/2026", "note": "@MinhChung-n8z" }
+  { "youtubeID": "O_vzVAKTsV8", "date": "12:58 30/04/2026", "note": "@MinhChung-n8z" },
+  { "youtubeID": "sic-Wu_I-zI", "date": "13:16 01/05/2026", "note": "@khiemnguyen7080" }
 ]

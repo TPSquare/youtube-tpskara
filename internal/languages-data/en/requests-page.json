@@ -1,0 +1,21 @@
+{
+  "description": "Karaoke on demand, tailored to your preferences!",
+  "vietnam": "Vietnam",
+  "thank": "Thank you for supporting my channel!",
+  "listOfRequests": "Request list",
+  "notesToListOfRequests": [],
+  "emptyOfRequests": "There are currently no requests recorded on the TPSKara channel",
+  "changeLanguage": "Change language",
+  "requestElement": {
+    "request": "Request",
+    "expireRequest": "The request will expire in {Xday}",
+    "expireRequestInLess1Minutes": "The request will expire in less than 1 minute",
+    "uploadVideo": "The video will be uploaded at {Xday}",
+    "time": {
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds"
+    }
+  }
+}

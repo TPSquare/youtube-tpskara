@@ -111,7 +111,7 @@ main {
   margin-bottom: 0.25em;
 }
 
-#requests {
+#content-box {
   font-size: 16px;
   flex: 1;
   overflow-y: auto;
@@ -119,7 +119,11 @@ main {
   padding-top: 2em;
 }
 
-#requests .margin {
+#requests {
+  width: 100%;
+}
+
+#content-box .margin {
   height: 150px;
 }
 
@@ -294,6 +298,23 @@ main {
 #overlay.show {
   opacity: 1;
   pointer-events: all;
+}
+
+#tool-bar {
+  display: flex;
+  justify-content: end;
+}
+
+#tool-bar button  {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #f1f1f1;
+  background-color: #323232;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 0.75em;
+  cursor: pointer;
 }
 
 @media (max-width: 992px) {

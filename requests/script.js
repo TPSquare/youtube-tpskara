@@ -1,4 +1,31 @@
-import environment from "../configs/environment.js";
+const changeLanguage = () => {
+  localStorage.setItem("choose-languages-goto", "requests");
+  window.location.href = "../choose-languages?goto=requests";
+};
+
+const lang = localStorage.getItem("lang");
+if (!lang) changeLanguage();
+const languageApi = `../internal/languages-data/${lang}/requests-page.json`;
+const language = await fetch(languageApi).then((res) => res.json());
+
+(async () => {
+  document.documentElement.setAttribute("lang", lang);
+  document.head.querySelector("title").textContent += language.listOfRequests;
+
+  const insertText = (query, text) => (document.body.querySelector(query).textContent = text);
+  insertText("#about .description", language.description);
+  insertText("#about > div:nth-child(6) .text", language.vietnam);
+  insertText("#about .footer", language.thank);
+  insertText("#requests > .title", language.listOfRequests.toUpperCase() + ":");
+  insertText("#requests-list .empty", language.emptyOfRequests + "...");
+  insertText("#tool-bar .change-language", language.changeLanguage);
+
+  const insertHTML = (query, html) => (document.body.querySelector(query).innerHTML = html);
+  const notesToListOfRequestsHTML = language.notesToListOfRequests.map((e) => `<div>${e}</div>`);
+  insertHTML("#requests > .informations", notesToListOfRequestsHTML.join());
+})();
+
+import environment from "../internal/configs/environment.js";
 (async () => {
   if (environment === "development") return;
   const api = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC-_m5GLVvVOEUYkTknhdjzw&key=AIzaSyDJvCeWiQP8gLQCiZGoQAOQvE9F-e1LIy8`;
@@ -24,7 +51,9 @@ import refreshOrder from "./utilities/refresh-request-order.js";
 
   if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
 
-  const requestPromises = requests.map((req, i) => createRequestElement(req, i, refreshOrder));
+  const requestPromises = requests.map((req, i) =>
+    createRequestElement(req, i, refreshOrder, language),
+  );
   await Promise.all(requestPromises);
   refreshOrder();
 })();
@@ -46,4 +75,8 @@ import refreshOrder from "./utilities/refresh-request-order.js";
     overlayElement.classList.remove("show");
     aboutElement.classList.remove("show");
   };
+})();
+
+(() => {
+  document.body.querySelector("#tool-bar .change-language").onclick = changeLanguage;
 })();

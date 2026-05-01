@@ -1,0 +1,23 @@
+{
+  "description": "Karaoke theo yêu cầu, theo đúng sở thích của bạn!",
+  "vietnam": "Việt Nam",
+  "thank": "Cảm ơn các bạn đã ủng hộ kênh mình!",
+  "listOfRequests": "Danh sách các yêu cầu",
+  "notesToListOfRequests": [
+    "Những yêu cầu trước ngày 16/01/2026 đã bị hủy bỏ do thời gian kênh bị <a href=\"http://youtube.com/post/UgkxN7LPPsO8SOgWvTbn3IT1wDXvqaWQgtTr\">cảnh cáo bản quyền</a> quá lâu!"
+  ],
+  "emptyOfRequests": "Hiện không có yêu cầu nào được ghi nhận trên kênh TPSKara",
+  "changeLanguage": "Đổi ngôn ngữ",
+  "requestElement": {
+    "request": "Yêu cầu",
+    "expireRequest": "Yêu cầu sẽ hết hạn sau {Xday} nữa",
+    "expireRequestInLess1Minutes": "Yêu cầu sẽ hết hạn sau chưa đầy 1 phút nữa",
+    "uploadVideo": "Video sẽ được đăng tải vào lúc {Xday}",
+    "time": {
+      "days": "ngày",
+      "hours": "giờ",
+      "minutes": "phút",
+      "seconds": "giây"
+    }
+  }
+}
