@@ -13,8 +13,9 @@
   "requestElement": {
     "request": "Yêu cầu",
     "expireRequest": "Yêu cầu sẽ hết hạn sau {Xday} nữa",
-    "expireRequestInLess1Minutes": "Yêu cầu sẽ hết hạn sau chưa đầy 1 phút nữa",
     "uploadVideo": "Video sẽ được đăng tải vào lúc {Xday}",
+    "uploaded": "Đã tải lên",
+    "expired": "Đã hết hạn",
     "time": {
       "days": "ngày",
       "hours": "giờ",

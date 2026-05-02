@@ -203,6 +203,10 @@ main {
   text-decoration: none;
 }
 
+#requests-list .request .title.expired {
+  text-decoration: line-through;
+}
+
 #requests-list .request .title:hover {
   text-decoration: underline;
 }
@@ -239,18 +243,23 @@ main {
   margin-left: 0.5em;
 }
 
-#requests-list .request .priority {
+#requests-list .request .float .priority {
   background-color: #00acac;
   color: white;
 }
 
-#requests-list .request .remaining {
+#requests-list .request .float .remaining {
   background-color: #272727;
   color: #2eb144;
 }
 
-#requests-list .request .done {
+#requests-list .request .float .done {
   background-color: #38ae47;
+  color: #f1f1f1;
+}
+
+#requests-list .request .float .expired {
+  background-color: red;
   color: #f1f1f1;
 }
 
@@ -305,7 +314,7 @@ main {
   justify-content: end;
 }
 
-#tool-bar button  {
+#tool-bar button {
   font-family: "Roboto", sans-serif;
   font-size: 0.9em;
   font-weight: 500;
@@ -343,7 +352,7 @@ main {
     width: 55px;
   }
 
-  #requests {
+  #content-box {
     font-size: 15px;
   }
 }
@@ -357,13 +366,13 @@ main {
     font-size: 13px;
   }
 
-  #requests {
+  #content-box {
     font-size: 14px;
     padding: 0.6em;
     --ms-overflow-style: none;
     scrollbar-width: none;
   }
-  #requests::-webkit-scrollbar {
+  #content-box::-webkit-scrollbar {
     display: none;
   }
 
@@ -387,7 +396,7 @@ main {
     padding-block: 2em;
   }
 
-  #requests {
+  #content-box {
     font-size: 13px;
   }
 }
@@ -397,7 +406,7 @@ main {
     display: none;
   }
 
-  #requests {
+  #content-box {
     font-size: 12px;
   }
 }

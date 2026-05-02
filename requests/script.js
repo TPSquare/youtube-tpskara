@@ -33,15 +33,14 @@ import environment from "../internal/configs/environment.js";
   const { viewCount, subscriberCount, videoCount } = statistics;
   const aboutElement = document.getElementById("about");
   aboutElement.querySelector(".label.subscribers .text").textContent =
-    `${Number(subscriberCount).toLocaleString("vi-VN")} ${language.subscribers}`;
+    `${Number(subscriberCount).toLocaleString("vi-VN")} ${language.subscribers.toLowerCase()}`;
   aboutElement.querySelector(".label.videos .text").textContent =
-    `${Number(videoCount).toLocaleString("vi-VN")} ${language.videos}`;
+    `${Number(videoCount).toLocaleString("vi-VN")} ${language.videos.toLowerCase()}`;
   aboutElement.querySelector(".label.views .text").textContent =
-    `${Number(viewCount).toLocaleString("vi-VN")} ${language.views}`;
+    `${Number(viewCount).toLocaleString("vi-VN")} ${language.views.toLowerCase()}`;
 })();
 
 import createRequestElement from "./utilities/create-request-element.js";
-import refreshOrder from "./utilities/refresh-request-order.js";
 (async () => {
   const requestsListElement = document.getElementById("requests-list");
   const requests = await fetch(`./requests.json?t=${Date.now()}`)
@@ -50,11 +49,8 @@ import refreshOrder from "./utilities/refresh-request-order.js";
 
   if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
 
-  const requestPromises = requests.map((req, i) =>
-    createRequestElement(req, i, refreshOrder, language),
-  );
-  await Promise.all(requestPromises);
-  refreshOrder();
+  for (let index = 0; index < requests.length; index++)
+    createRequestElement(requests[index], index, language);
 })();
 
 (() => {

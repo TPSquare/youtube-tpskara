@@ -7,18 +7,7 @@ const EXPIRATION = 30;
 
 const requestsListElement = document.getElementById("requests-list");
 
-const logRequestNote = (index, note) => console.warn(`>>> Line ${index + 2} is ${note}!`);
-
-export default async function createRequestElement(request, index, refreshRequestOrder, language) {
-  if (request.uploadDate) {
-    const uploadDate = dateStringToObject(request.uploadDate);
-    const now = new Date();
-    if (now > uploadDate) {
-      logRequestNote(index, "uploaded");
-      return;
-    }
-  }
-
+export default async function createRequestElement(request, index, language) {
   const requestElement = document.createElement("div");
   requestElement.className = "request";
   requestsListElement.appendChild(requestElement);
@@ -43,6 +32,7 @@ export default async function createRequestElement(request, index, refreshReques
 
   const orderElement = document.createElement("div");
   orderElement.className = "order";
+  orderElement.textContent = index + 1;
   requestElement.appendChild(orderElement);
 
   const thumbnailElement = document.createElement("img");
@@ -89,33 +79,25 @@ export default async function createRequestElement(request, index, refreshReques
   if (config.date) {
     const remainingData = calculateTheRemainingTime(config.date, EXPIRATION);
     if (remainingData.isExpired) {
-      logRequestNote(index, "expired");
-      requestsListElement.removeChild(requestElement);
-      return;
+      titleElement.classList.add("expired");
+      floatElement.childNodes.forEach((child) => floatElement.removeChild(child));
+
+      const expiredElement = document.createElement("div");
+      expiredElement.className = "expired";
+      expiredElement.textContent = language.requestElement.expired;
+      floatElement.appendChild(expiredElement);
     } else {
       const remainingElement = document.createElement("div");
       remainingElement.className = "remaining";
       floatElement.appendChild(remainingElement);
 
-      const keyInUsed = Object.keys(remainingData).find((key) => remainingData[key] > 0);
+      const keyInUsed =
+        Object.keys(remainingData).find((key) => remainingData[key] > 0) || "seconds";
 
       remainingElement.textContent = `${remainingData[keyInUsed]} ${language.requestElement.time[keyInUsed]}`;
       if (remainingData.days === EXPIRATION - 1 && remainingData.hours !== 0)
         remainingElement.textContent += ` ${remainingData.hours} ${language.requestElement.time.hours}`;
       remainingElement.title = `${language.requestElement.expireRequest.replace("{Xday}", remainingElement.textContent)}!`;
-
-      if (keyInUsed === "seconds") {
-        remainingElement.title = language.requestElement.expireRequestInLess1Minutes + "!";
-        let remainingSeconds = remainingData.seconds;
-        const countdownID = setInterval(() => {
-          if (remainingSeconds <= 0) {
-            requestsListElement.removeChild(requestElement);
-            refreshRequestOrder();
-            clearInterval(countdownID);
-          }
-          remainingElement.textContent = `${--remainingSeconds} ${language.requestElement.time.seconds}`;
-        }, 1000);
-      }
     }
   }
 
@@ -125,5 +107,12 @@ export default async function createRequestElement(request, index, refreshReques
     doneElement.textContent = config.uploadDate;
     doneElement.title = `${language.requestElement.uploadVideo.replace("{Xday}", config.uploadDate)}!`;
     floatElement.appendChild(doneElement);
+
+    const uploadDate = dateStringToObject(config.uploadDate);
+    const now = new Date();
+    if (now > uploadDate) {
+      doneElement.textContent = language.requestElement.uploaded;
+      doneElement.title = language.requestElement.uploaded;
+    }
   }
 }
