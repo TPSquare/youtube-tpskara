@@ -1,4 +1,6 @@
 [
+  { "youtubeID": "xwgJ6H-oHfA", "priority": "25.000đ", "note": "@nguyenvosongtoan2580" },
+  { "youtubeID": "Q4cwD-Lk25A", "priority": "25.000đ", "note": "@nguyenvosongtoan2580" },
   { "youtubeID": "0za6YLO5mhU", "priority": "Mới", "date": "13:20 30/04/2026", "note": "@Ronaldinho6789, @TiếnLêtiến-v9i" },
   { "youtubeID": "UUGScGFbPxk", "priority": "Mới", "date": "13:20 30/04/2026", "note": "@laitruong7922" },
   { "youtubeID": "yTj9Owe40do", "date": "10:00 26/04/2026", "request": "Tone nữ", "note": "@motnguoi12345" },
@@ -9,9 +11,6 @@
   { "youtubeID": "kMbCYuWyxCM", "date": "22:09 07/04/2026", "note": "@tungnguynakajustinh @Candle2804" },
   { "youtubeID": "E64bsWgs8_w", "date": "22:08 07/04/2026", "note": "@kaimimigm9862" },
   { "youtubeID": "nAvmPdtX9JE", "request": "Có hook", "note": "@duongnguyenquanghuy1754" },
-  { "youtubeID": "HTpP9LVVoNs", "date": "12:19 06/04/2026", "note": "@Ceaser555" },
-  { "youtubeID": "dz6xe0xXqYE", "date": "12:21 06/04/2026", "note": "@laitruong7922" },
-  { "youtubeID": "M7UlJ0m-yy4", "date": "12:24 06/04/2026", "note": "@laitruong7922" },
   { "youtubeID": "vdX6DwxyVvc", "date": "23:23 06/04/2026", "note": "@laitruong7922" },
   { "youtubeID": "3uyno09gQLw", "date": "23:24 06/04/2026", "note": "@laitruong7922" },
   { "youtubeID": "c8jOjMTNo0U", "date": "22:06 07/04/2026", "note": "@QuocanhLe-ie5sq" },
@@ -36,7 +35,5 @@
   { "youtubeID": "EScG2G9JV1U", "date": "21:08 27/04/2026", "note": "@AntoineLe20" },
   { "youtubeID": "O_vzVAKTsV8", "date": "12:58 30/04/2026", "note": "@MinhChung-n8z" },
   { "youtubeID": "sic-Wu_I-zI", "date": "13:16 01/05/2026", "note": "@khiemnguyen7080" },
-  { "youtubeID": "z5GrABuBWsw", "date": "21:16 03/05/2026", "note": "@nguyenviettai9235" },
-  { "youtubeID": "xwgJ6H-oHfA", "note": "@nguyenvosongtoan2580" },
-  { "youtubeID": "Q4cwD-Lk25A", "note": "@nguyenvosongtoan2580" }
+  { "youtubeID": "z5GrABuBWsw", "date": "21:16 03/05/2026", "note": "@nguyenviettai9235" }
 ]
