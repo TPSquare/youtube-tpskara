@@ -203,7 +203,7 @@ main {
   text-decoration: none;
 }
 
-#requests-list .request .title.expired {
+#requests-list .request .title.cancel {
   text-decoration: line-through;
 }
 
@@ -258,7 +258,7 @@ main {
   color: #f1f1f1;
 }
 
-#requests-list .request .float .expired {
+#requests-list .request .float .cancel {
   background-color: red;
   color: #f1f1f1;
 }

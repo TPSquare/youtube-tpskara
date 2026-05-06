@@ -21,6 +21,7 @@ export default async function createRequestElement(request, index, language) {
     priorities: request.priorities || (request.priority ? [request.priority] : undefined),
     date: request.date, // hh:mm dd/mm/yyyy
     uploadDate: request.uploadDate, // hh:mm dd/mm/yyyy
+    cancel: request.cancel,
   };
   if (request.youtubeID) {
     requestElement.onclick = () => console.log(request.youtubeID);
@@ -67,6 +68,16 @@ export default async function createRequestElement(request, index, language) {
   floatElement.className = "float";
   requestElement.appendChild(floatElement);
 
+  const addCancel = (text) => {
+    titleElement.classList.add("cancel");
+    floatElement.childNodes.forEach((child) => floatElement.removeChild(child));
+
+    const expiredElement = document.createElement("div");
+    expiredElement.className = "cancel";
+    expiredElement.textContent = text;
+    floatElement.appendChild(expiredElement);
+  };
+
   if (config.priorities) {
     for (const priority of config.priorities) {
       const priorityElement = document.createElement("div");
@@ -79,13 +90,7 @@ export default async function createRequestElement(request, index, language) {
   if (config.date) {
     const remainingData = calculateTheRemainingTime(config.date, EXPIRATION);
     if (remainingData.isExpired) {
-      titleElement.classList.add("expired");
-      floatElement.childNodes.forEach((child) => floatElement.removeChild(child));
-
-      const expiredElement = document.createElement("div");
-      expiredElement.className = "expired";
-      expiredElement.textContent = language.requestElement.expired;
-      floatElement.appendChild(expiredElement);
+      addCancel(language.requestElement.expired);
     } else {
       const remainingElement = document.createElement("div");
       remainingElement.className = "remaining";
@@ -112,7 +117,9 @@ export default async function createRequestElement(request, index, language) {
     const now = new Date();
     if (now > uploadDate) {
       doneElement.textContent = language.requestElement.uploaded;
-      doneElement.title = language.requestElement.uploaded;
+      doneElement.removeAttribute("title");
     }
   }
+
+  if (config.cancel) addCancel(config.cancel);
 }
