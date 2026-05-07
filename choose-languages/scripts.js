@@ -7,9 +7,9 @@ Object.keys(languagesConfig).forEach((key) => {
   button.className = key;
   button.onclick = () => {
     localStorage.setItem("lang", key);
-    const goto = localStorage.getItem("choose-languages-goto") || "requests";
+    const goto = localStorage.getItem("choose-languages-goto") || "../requests";
     localStorage.removeItem("choose-languages-goto");
-    window.location.href = `../${goto}`;
+    window.location.href = `${goto}`;
   };
   wrapperElement.appendChild(button);
 

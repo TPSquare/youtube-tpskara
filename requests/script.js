@@ -1,15 +1,9 @@
-const changeLanguage = () => {
-  localStorage.setItem("choose-languages-goto", "requests");
-  window.location.href = "../choose-languages?goto=requests";
-};
+import gotoChooseLanguages from "../internal/utilities/goto-choose-languages.js";
+import getLanguages from "../internal/utilities/get-languages.js";
 
-const lang = localStorage.getItem("lang");
-if (!lang) changeLanguage();
-const languageApi = `../internal/languages-data/${lang}/requests-page.json`;
-const language = await fetch(languageApi).then((res) => res.json());
+const language = await getLanguages();
 
 (async () => {
-  document.documentElement.setAttribute("lang", lang);
   document.head.querySelector("title").textContent += language.listOfRequests;
 
   const insertText = (query, text) => (document.body.querySelector(query).textContent = text);
@@ -73,5 +67,5 @@ import createRequestElement from "./utilities/create-request-element.js";
 })();
 
 (() => {
-  document.body.querySelector("#tool-bar .change-language").onclick = changeLanguage;
+  document.body.querySelector("#tool-bar .change-language").onclick = gotoChooseLanguages;
 })();
