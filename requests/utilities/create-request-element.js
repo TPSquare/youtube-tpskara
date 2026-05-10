@@ -22,6 +22,7 @@ export default async function createRequestElement(request, index, language) {
     date: request.date, // hh:mm dd/mm/yyyy
     uploadDate: request.uploadDate, // hh:mm dd/mm/yyyy
     cancel: request.cancel,
+    previews: request.previews,
   };
   if (request.youtubeID) {
     requestElement.onclick = () => console.log(request.youtubeID);
@@ -31,31 +32,35 @@ export default async function createRequestElement(request, index, language) {
     if (environment !== "development") config.link = `https://youtu.be/${request.youtubeID}`;
   }
 
+  const boxElement = document.createElement("div");
+  boxElement.className = "box";
+  requestElement.appendChild(boxElement);
+
   const orderElement = document.createElement("div");
   orderElement.className = "order";
   orderElement.textContent = index + 1;
-  requestElement.appendChild(orderElement);
+  boxElement.appendChild(orderElement);
 
   const thumbnailElement = document.createElement("img");
   thumbnailElement.src =
     config.thumbnailUrl || "https://tse4.mm.bing.net/th/id/OIP._k-Rbbqjzn5_zofRRV46YgHaEh";
   thumbnailElement.alt = config.title;
-  requestElement.appendChild(thumbnailElement);
+  boxElement.appendChild(thumbnailElement);
 
-  const rightElements = document.createElement("div");
-  rightElements.className = "right";
-  requestElement.appendChild(rightElements);
+  const infosElement = document.createElement("div");
+  infosElement.className = "infos";
+  boxElement.appendChild(infosElement);
 
   const titleElement = document.createElement("a");
   titleElement.className = "title";
   titleElement.title = config.title;
   titleElement.textContent = config.title;
   titleElement.href = config.link || "#";
-  rightElements.appendChild(titleElement);
+  infosElement.appendChild(titleElement);
 
   const rightBottomElement = document.createElement("div");
   rightBottomElement.className = "bottom";
-  rightElements.appendChild(rightBottomElement);
+  infosElement.appendChild(rightBottomElement);
 
   if (config.request) {
     const requestTextElement = document.createElement("div");
@@ -122,4 +127,22 @@ export default async function createRequestElement(request, index, language) {
   }
 
   if (config.cancel) addCancel(config.cancel);
+
+  if (config.previews) {
+    const previewsElement = document.createElement("div");
+    previewsElement.className = "previews";
+    requestElement.appendChild(previewsElement);
+
+    const titleElement = document.createElement("div");
+    titleElement.className = "title";
+    titleElement.textContent = language.requestElement.preview + ":";
+    previewsElement.appendChild(titleElement);
+
+    for (const preview of config.previews) {
+      const itemElement = document.createElement("a");
+      itemElement.textContent = preview.title;
+      itemElement.href = `../../videos/${preview.id}.html`;
+      previewsElement.appendChild(itemElement);
+    }
+  }
 }

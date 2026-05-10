@@ -1,17 +1,61 @@
 [
-  { "youtubeID": "4vu3wIJA-D4", "priority": "30.000đ", "uploadDate": "6:00 06/06/2026", "note": "NGUYEN DIEM QUYNH" },
-  { "youtubeID": "0za6YLO5mhU", "priority": "Mới", "date": "13:20 30/04/2026", "note": "@Ronaldinho6789, @TiếnLêtiến-v9i" },
+  {
+    "youtubeID": "4vu3wIJA-D4",
+    "priority": "30.000đ",
+    "uploadDate": "6:00 06/06/2026",
+    "note": "NGUYEN DIEM QUYNH",
+    "previews": [
+      {
+        "title": "Karaoke | Tệ Hại & Xấu Xí | B Ray | \"UNhiddenGem\" Mixtape",
+        "id": "te-hai-xau-xi-bray"
+      },
+      {
+        "title": "Karaoke Có Bè | Tệ Hại & Xấu Xí | B Ray | \"UNhiddenGem\" Mixtape",
+        "id": "te-hai-xau-xi-bray-co-be"
+      }
+    ]
+  },
+  {
+    "youtubeID": "0za6YLO5mhU",
+    "priority": "Mới",
+    "date": "13:20 30/04/2026",
+    "note": "@Ronaldinho6789, @TiếnLêtiến-v9i"
+  },
   { "youtubeID": "UUGScGFbPxk", "cancel": "Bị cảnh cáo bản quyền", "note": "@laitruong7922" },
-  { "youtubeID": "yTj9Owe40do", "date": "10:00 26/04/2026", "request": "Tone nữ", "note": "@motnguoi12345" },
+  {
+    "youtubeID": "yTj9Owe40do",
+    "date": "10:00 26/04/2026",
+    "request": "Tone nữ",
+    "note": "@motnguoi12345"
+  },
   { "youtubeID": "umMQf9spwMw", "cancel": "Bị cảnh cáo bản quyền", "note": "@laitruong7922" },
-  { "youtubeID": "YhOT6FTC7HM", "date": "12:51 26/04/2026", "request": "Bè full bài", "note": "@trmquy" },
-  { "youtubeID": "ryzP7UqdvBc", "priority": "New", "date": "13:20 01/05/2026", "note": "@Mrminion1764" },
-  { "youtubeID": "3gOINvQo7Qc", "priority": "Mới", "date": "10:32 03/05/2026", "note": "@kaimimigm9862, @TàiNguyễnVăn-k7u" },
+  {
+    "youtubeID": "YhOT6FTC7HM",
+    "date": "12:51 26/04/2026",
+    "request": "Bè full bài",
+    "note": "@trmquy"
+  },
+  {
+    "youtubeID": "ryzP7UqdvBc",
+    "priority": "New",
+    "date": "13:20 01/05/2026",
+    "note": "@Mrminion1764"
+  },
+  {
+    "youtubeID": "3gOINvQo7Qc",
+    "priority": "Mới",
+    "date": "10:32 03/05/2026",
+    "note": "@kaimimigm9862, @TàiNguyễnVăn-k7u"
+  },
   { "youtubeID": "nAvmPdtX9JE", "request": "Có hook", "note": "@duongnguyenquanghuy1754" },
   { "youtubeID": "OGQsXBl1SPg", "date": "22:30 09/05/2026", "note": "@at-sn7ny" },
   { "youtubeID": "1YEb5jmi81o", "date": "11:09 12/04/2026", "note": "@oslodanghustle" },
   { "youtubeID": "gCP41vACnAw", "note": "@ngonguyenthuyduong" },
-  { "youtubeID": "rTonHEpq8eA", "date": "21:00 19/04/2026", "note": "@BảoPhạmViệtGia, @phuthinhlenguyen7856" },
+  {
+    "youtubeID": "rTonHEpq8eA",
+    "date": "21:00 19/04/2026",
+    "note": "@BảoPhạmViệtGia, @phuthinhlenguyen7856"
+  },
   { "youtubeID": "1PLNGPQfQ9c", "date": "19:22 15/04/2026", "note": "@H13dodgang" },
   { "youtubeID": "qX21BSLI-Lo", "date": "07:06 17/04/2026", "note": "@giaophạm-o9i" },
   { "youtubeID": "M1XtParKpps", "date": "10:06 17/04/2026", "note": "@dranixcallme7915" },

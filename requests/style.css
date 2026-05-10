@@ -134,7 +134,7 @@ main {
   margin-top: 0.625em;
 }
 
-#requests .title {
+#requests > .title {
   font-weight: bold;
   font-size: 1.25em;
   color: #f1f1f1;
@@ -149,26 +149,26 @@ main {
   margin-bottom: 0.5em;
 }
 
-#requests .informations a {
+#requests a {
   color: dodgerblue;
 }
 
 #requests-list .request {
   position: relative;
-  display: flex;
   padding-left: 0.5em;
-  padding-block: 0.625em;
+  padding-bottom: 0.625em;
+  margin-top: 0.625em;
 }
 
-#requests-list .request:first-child {
-  padding-top: 0;
+#requests-list .request:not(:last-child) {
+  border-bottom: 0.15em solid #ffffff33;
 }
 
-#requests-list .request:not(:first-child) {
-  border-top: 2px solid #ffffff33;
+#requests-list .box {
+  display: flex;
 }
 
-#requests-list .request .order {
+#requests-list .box .order {
   font-size: 1em;
   font-weight: bold;
   width: 1.25em;
@@ -177,20 +177,20 @@ main {
   word-break: break-all;
 }
 
-#requests-list .request img {
+#requests-list .box img {
   height: 3.75em;
   width: 6.6666667em;
   border-radius: 0.25em;
   margin-right: 0.625em;
 }
 
-#requests-list .request .right {
+#requests-list .box .infos {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#requests-list .request .title {
+#requests-list .infos .title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
@@ -203,15 +203,15 @@ main {
   text-decoration: none;
 }
 
-#requests-list .request .title.cancel {
-  text-decoration: line-through;
-}
-
-#requests-list .request .title:hover {
+#requests-list .infos .title:hover {
   text-decoration: underline;
 }
 
-#requests-list .request .right .bottom {
+#requests-list .infos .title.cancel {
+  text-decoration: line-through;
+}
+
+#requests-list .infos .bottom {
   display: flex;
   flex-wrap: wrap;
   color: #aaaaaa;
@@ -219,48 +219,69 @@ main {
   font-weight: bold;
 }
 
-#requests-list .request .right .bottom > * {
+#requests-list .infos .bottom > * {
   text-wrap: nowrap;
 }
 
-#requests-list .request .request-text {
+#requests-list .box .request-text {
   margin-right: 1.5em;
   margin-bottom: 0.2em;
 }
 
-#requests-list .request .float {
+#requests-list .float {
   position: absolute;
   display: flex;
+  top: 0;
+  right: 0;
   font-size: 0.9em;
   font-weight: 500;
   right: 0;
 }
 
-#requests-list .request .float > * {
+#requests-list .float > * {
   padding: 0.1em 0.4em;
   border-radius: 0.25em;
   box-shadow: 0 0.5em 1em 0.1em black;
   margin-left: 0.5em;
 }
 
-#requests-list .request .float .priority {
+#requests-list .float .priority {
   background-color: #00acac;
   color: white;
 }
 
-#requests-list .request .float .remaining {
+#requests-list .float .remaining {
   background-color: #272727;
   color: #2eb144;
 }
 
-#requests-list .request .float .done {
+#requests-list .float .done {
   background-color: #38ae47;
   color: #f1f1f1;
 }
 
-#requests-list .request .float .cancel {
+#requests-list .float .cancel {
   background-color: red;
   color: #f1f1f1;
+}
+
+#requests-list .previews {
+  font-size: 1em;
+  padding-left: 1.25em;
+  margin-top: 0.4em;
+}
+
+#requests-list .previews > * {
+  margin-bottom: 0.1em;
+}
+
+#requests-list .previews a {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-left: 1em;
 }
 
 #requests-list .empty {
@@ -374,11 +395,6 @@ main {
   }
   #content-box::-webkit-scrollbar {
     display: none;
-  }
-
-  #requests-list .request {
-    margin-bottom: 0.4em;
-    padding-left: 0.6em;
   }
 
   #requests .divider {
