@@ -141,7 +141,7 @@ export default async function createRequestElement(request, index, language) {
     for (const preview of config.previews) {
       const itemElement = document.createElement("a");
       itemElement.textContent = preview.title;
-      itemElement.href = `../../videos/${preview.id}.html`;
+      itemElement.href = `../videos/${preview.id}.html`;
       previewsElement.appendChild(itemElement);
     }
   }
