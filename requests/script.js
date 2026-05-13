@@ -43,8 +43,11 @@ import createRequestElement from "./utilities/create-request-element.js";
 
   if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
 
-  for (let index = 0; index < requests.length; index++)
-    createRequestElement(requests[index], index, language);
+  const createRequestPromises = requests.map((request) => createRequestElement(request, language));
+  await Promise.all(createRequestPromises);
+  requestsListElement
+    .querySelectorAll(".order:not(.no-order)")
+    .forEach((order, index) => (order.textContent = index + 1));
 })();
 
 (() => {

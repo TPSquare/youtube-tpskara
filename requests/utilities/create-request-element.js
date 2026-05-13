@@ -7,7 +7,7 @@ const EXPIRATION = 30;
 
 const requestsListElement = document.getElementById("requests-list");
 
-export default async function createRequestElement(request, index, language) {
+export default async function createRequestElement(request, language) {
   const requestElement = document.createElement("div");
   requestElement.className = "request";
   requestsListElement.appendChild(requestElement);
@@ -38,8 +38,8 @@ export default async function createRequestElement(request, index, language) {
 
   const orderElement = document.createElement("div");
   orderElement.className = "order";
-  orderElement.textContent = index + 1;
   boxElement.appendChild(orderElement);
+  const addNoOrder = () => orderElement.classList.add("no-order");
 
   const thumbnailElement = document.createElement("img");
   thumbnailElement.src =
@@ -76,6 +76,7 @@ export default async function createRequestElement(request, index, language) {
   const addCancel = (text) => {
     titleElement.classList.add("cancel");
     floatElement.childNodes.forEach((child) => floatElement.removeChild(child));
+    addNoOrder();
 
     const expiredElement = document.createElement("div");
     expiredElement.className = "cancel";
@@ -117,6 +118,7 @@ export default async function createRequestElement(request, index, language) {
     doneElement.textContent = config.uploadDate;
     doneElement.title = `${language.requestElement.uploadVideo.replace("{Xday}", config.uploadDate)}!`;
     floatElement.appendChild(doneElement);
+    addNoOrder();
 
     const uploadDate = dateStringToObject(config.uploadDate);
     const now = new Date();
