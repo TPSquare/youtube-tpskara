@@ -15,7 +15,12 @@
       }
     ]
   },
-  { "youtubeID": "IkaUDsN5xTo", "priority": "20.000đ", "note": "Nguyễn Võ Song Toàn" },
+  {
+    "youtubeID": "IkaUDsN5xTo",
+    "priority": "20.000đ",
+    "uploadDate": "06:00 14/05/2026",
+    "note": "Nguyễn Võ Song Toàn"
+  },
   {
     "youtubeID": "yTj9Owe40do",
     "date": "10:00 26/04/2026",
