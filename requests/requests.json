@@ -19,7 +19,18 @@
     "youtubeID": "A_Xt8vxiSB0",
     "priority": "30.000đ",
     "request": "Bè tiếng Anh",
-    "note": "DUONG NGUYEN QUANG HUY"
+    "uploadDate": "6:00 13/06/2026",
+    "note": "DUONG NGUYEN QUANG HUY",
+    "previews": [
+      {
+        "title": "Karaoke | ĐÚNG NHƯ LỜI HỌ NÓI | B Ray | \"UNhiddenGem\" Mixtape",
+        "id": "dung-nhu-loi-ho-noi-bray"
+      },
+      {
+        "title": "Karaoke Có Bè Tiếng Anh | ĐÚNG NHƯ LỜI HỌ NÓI | B Ray | \"UNhiddenGem\" Mixtape",
+        "id": "dung-nhu-loi-ho-noi-bray-be-tieng-anh"
+      }
+    ]
   },
   { "youtubeID": "dzPacxKPGzo", "priority": "20.000đ", "note": "Võ Phạm Anh Khoa" },
   {

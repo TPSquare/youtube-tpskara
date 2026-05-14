@@ -4,6 +4,7 @@ const textarea = document.getElementById("input");
 const standardizeBtn = document.body.querySelector("#standardize-btn-wrapper button");
 
 standardizeBtn.onclick = () => {
+  Standardize.clearTimeline();
   Standardize.separatedIntoLines();
   Standardize.disguiseSensitiveWords();
 };
@@ -21,7 +22,7 @@ class Standardize {
           break;
         } else if (value[i].toLowerCase() !== value[i]) {
           if (value[i - 1] !== " " && value[i - 1].toLowerCase() !== value[i - 1]) continue;
-          res.push(value.slice(0, i));
+          res.push(value.slice(0, i - 1));
           value = value.slice(i);
           i = 0;
         }
@@ -41,5 +42,10 @@ class Standardize {
       }
     }
     textarea.value = res.join("");
+  }
+
+  static clearTimeline() {
+    const timeRegex = /(\d+\s?phút,\s?)?\d+\s?giây|\d{1,2}:\d{2}/gm;
+    textarea.value = textarea.value.replace(timeRegex, "");
   }
 }

@@ -5,7 +5,7 @@ window.onresize = () => {
   const height = window.innerHeight;
   const videoHeight = Math.min(height, (width * 9) / 16);
   main.style.height = `${videoHeight}px`;
-  title.style.fontSize = `${videoHeight / 25}px`;
+  title.style.fontSize = `${videoHeight / 30}px`;
 };
 window.onresize();
 
