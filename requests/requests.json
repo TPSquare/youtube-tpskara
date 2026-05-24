@@ -38,7 +38,15 @@
     "request": "Bè full bài",
     "note": "@trmquy"
   },
-  { "youtubeID": "ERABWON9Qck", "priority": "25.000đ", "note": "DUONG NGUYEN QUANG HUY" },
+  {
+    "youtubeID": "ERABWON9Qck",
+    "priority": "25.000đ",
+    "note": "DUONG NGUYEN QUANG HUY",
+    "uploadDate": "06:00 23/06/2026",
+    "previews": [
+      { "title": "Karaoke | CHO CON | B Ray | \"UNhiddenGem\" Mixtape", "id": "cho-con-bray" }
+    ]
+  },
   { "youtubeID": "jufP5ebZQQg", "request": "Có hook tiếng Anh", "note": "@Trung572" },
   {
     "youtubeID": "ryzP7UqdvBc",
