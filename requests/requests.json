@@ -2,7 +2,7 @@
   {
     "youtubeID": "4vu3wIJA-D4",
     "priority": "30.000đ",
-    "uploadDate": "6:00 06/06/2026",
+    "uploadDate": "06:00 06/06/2026",
     "note": "NGUYEN DIEM QUYNH",
     "previews": [
       {
@@ -19,7 +19,7 @@
     "youtubeID": "A_Xt8vxiSB0",
     "priority": "30.000đ",
     "request": "Bè tiếng Anh",
-    "uploadDate": "6:00 13/06/2026",
+    "uploadDate": "06:00 13/06/2026",
     "note": "DUONG NGUYEN QUANG HUY",
     "previews": [
       {
@@ -32,13 +32,14 @@
       }
     ]
   },
-  { "youtubeID": "ERABWON9Qck", "priority": "25.000đ", "note": "DUONG NGUYEN QUANG HUY" },
   {
     "youtubeID": "YhOT6FTC7HM",
-    "date": "12:51 26/04/2026",
+    "uploadDate": "06:00 25/05/2026",
     "request": "Bè full bài",
     "note": "@trmquy"
   },
+  { "youtubeID": "ERABWON9Qck", "priority": "25.000đ", "note": "DUONG NGUYEN QUANG HUY" },
+  { "youtubeID": "jufP5ebZQQg", "request": "Có hook tiếng Anh", "note": "@Trung572" },
   {
     "youtubeID": "ryzP7UqdvBc",
     "priority": "New",
