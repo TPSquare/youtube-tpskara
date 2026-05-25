@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": "requests.json",
+      "options": {
+        "printWidth": 11628
+      }
+    }
+  ]
+}
