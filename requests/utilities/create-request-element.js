@@ -18,9 +18,11 @@ export default async function createRequestElement(request, language) {
     thumbnailUrl: request.thumbnailUrl,
     link: request.link,
     request: request.requestText,
-    priorities: request.priorities || (request.priority ? [request.priority] : undefined),
+    priorities:
+      request.priorities || (request.priority ? [request.priority] : undefined),
     date: request.date, // hh:mm dd/mm/yyyy
     uploadDate: request.uploadDate, // hh:mm dd/mm/yyyy
+    uploadedLink: request.uploadedLink,
     cancel: request.cancel,
     previews: request.previews,
   };
@@ -29,7 +31,8 @@ export default async function createRequestElement(request, language) {
     const videoData = await getVideoData(request.youtubeID);
     config.title = videoData.title;
     config.thumbnailUrl = videoData.thumbnailUrl;
-    if (environment !== "development") config.link = `https://youtu.be/${request.youtubeID}`;
+    if (environment !== "development")
+      config.link = `https://youtu.be/${request.youtubeID}`;
   }
 
   const boxElement = document.createElement("div");
@@ -43,7 +46,8 @@ export default async function createRequestElement(request, language) {
 
   const thumbnailElement = document.createElement("img");
   thumbnailElement.src =
-    config.thumbnailUrl || "https://tse4.mm.bing.net/th/id/OIP._k-Rbbqjzn5_zofRRV46YgHaEh";
+    config.thumbnailUrl ||
+    "https://tse4.mm.bing.net/th/id/OIP._k-Rbbqjzn5_zofRRV46YgHaEh";
   thumbnailElement.alt = config.title;
   boxElement.appendChild(thumbnailElement);
 
@@ -103,7 +107,8 @@ export default async function createRequestElement(request, language) {
       floatElement.appendChild(remainingElement);
 
       const keyInUsed =
-        Object.keys(remainingData).find((key) => remainingData[key] > 0) || "seconds";
+        Object.keys(remainingData).find((key) => remainingData[key] > 0) ||
+        "seconds";
 
       remainingElement.textContent = `${remainingData[keyInUsed]} ${language.requestElement.time[keyInUsed]}`;
       if (remainingData.days === EXPIRATION - 1 && remainingData.hours !== 0)
@@ -125,6 +130,12 @@ export default async function createRequestElement(request, language) {
     if (now > uploadDate) {
       doneElement.textContent = language.requestElement.uploaded;
       doneElement.removeAttribute("title");
+
+      if (config.uploadedLink) {
+        doneElement.classList.add("uploaded-link");
+        doneElement.onclick = () =>
+          (window.location.href = config.uploadedLink);
+      }
     }
   }
 

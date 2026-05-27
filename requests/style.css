@@ -265,6 +265,18 @@ main {
   color: #f1f1f1;
 }
 
+#requests-list .float .done.uploaded-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#requests-list .float .done.uploaded-link::after {
+  content: "↗";
+  padding-left: 0.25em;
+  transform: translateY(-0.1em);
+  display: inline-block;
+}
+
 #requests-list .previews {
   font-size: 1em;
   padding-left: 1.25em;
