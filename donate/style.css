@@ -69,6 +69,10 @@ body.show-notices main {
   display: block;
 }
 
+a {
+  color: dodgerblue;
+}
+
 @media (max-width: 992px) {
   body {
     font-size: 18px;
