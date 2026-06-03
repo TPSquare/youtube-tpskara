@@ -109,10 +109,8 @@ export default async function createRequestElement(request, language) {
       const keyInUsed =
         Object.keys(remainingData).find((key) => remainingData[key] > 0) ||
         "seconds";
-
+      if (remainingData.days && remainingData.hours >= 12) ++remainingData.days;
       remainingElement.textContent = `${remainingData[keyInUsed]} ${language.requestElement.time[keyInUsed]}`;
-      if (remainingData.days === EXPIRATION - 1 && remainingData.hours !== 0)
-        remainingElement.textContent += ` ${remainingData.hours} ${language.requestElement.time.hours}`;
       remainingElement.title = `${language.requestElement.expireRequest.replace("{Xday}", remainingElement.textContent)}!`;
     }
   }

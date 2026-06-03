@@ -13,3 +13,7 @@ document.getElementById("ok-btn").onclick = () => {
   document.body.classList.remove("show-notices");
   localStorage.setItem("notices-version", noticesVersion);
 };
+
+document.getElementById("notices-btn").onclick = () => {
+  document.body.classList.add("show-notices");
+};

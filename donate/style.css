@@ -7,16 +7,21 @@
 }
 
 body {
+  position: relative;
   background-color: #0f0f0f;
   height: 100vh;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
-  display: flex;
+  overflow: hidden;
 }
 
 main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 1em;
-  margin: auto;
+  width: 40em;
   background-color: #282828;
   color: #eaeaea;
   padding: 0.5em 1em;
@@ -57,25 +62,40 @@ main {
   cursor: pointer;
 }
 
-body.show-notices {
-  padding: 1em;
+#notices-btn {
+  position: absolute;
+  font-size: 1em;
+  right: 1em;
+  top: 1em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-body.show-notices iframe {
-  display: none;
-}
-
-body.show-notices main {
-  display: block;
+#notices-btn svg {
+  height: 1.25em;
+  fill: #eaeaea;
 }
 
 a {
   color: dodgerblue;
 }
 
+body.show-notices iframe,
+body.show-notices #notices-btn {
+  display: none;
+}
+body.show-notices main {
+  display: block;
+}
+
 @media (max-width: 992px) {
   body {
     font-size: 18px;
+  }
+
+  main {
+    width: 85vw;
   }
 }
 
@@ -83,10 +103,18 @@ a {
   body {
     font-size: 16px;
   }
+
+  main {
+    width: 90vw;
+  }
 }
 
 @media (max-width: 576px) {
   body {
     font-size: 14px;
+  }
+
+  main {
+    width: 95vw;
   }
 }
