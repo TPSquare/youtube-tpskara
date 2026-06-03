@@ -34,6 +34,7 @@ export default async function createRequestElement(request, language) {
     if (environment !== "development")
       config.link = `https://youtu.be/${request.youtubeID}`;
   }
+  let isUploaded = false;
 
   const boxElement = document.createElement("div");
   boxElement.className = "box";
@@ -126,6 +127,7 @@ export default async function createRequestElement(request, language) {
     const uploadDate = dateStringToObject(config.uploadDate);
     const now = new Date();
     if (now > uploadDate) {
+      isUploaded = true;
       doneElement.textContent = language.requestElement.uploaded;
       doneElement.removeAttribute("title");
 
@@ -139,7 +141,7 @@ export default async function createRequestElement(request, language) {
 
   if (config.cancel) addCancel(config.cancel);
 
-  if (config.previews) {
+  if (config.previews && !isUploaded) {
     const previewsElement = document.createElement("div");
     previewsElement.className = "previews";
     requestElement.appendChild(previewsElement);
