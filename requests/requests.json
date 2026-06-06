@@ -1,15 +1,5 @@
 [
   {
-    "youtubeID": "4vu3wIJA-D4",
-    "priority": "30.000đ",
-    "uploadDate": "06:00 06/06/2026",
-    "note": "NGUYEN DIEM QUYNH",
-    "previews": [
-      { "title": "Karaoke | Tệ Hại & Xấu Xí | B Ray | \"UNhiddenGem\" Mixtape", "id": "te-hai-xau-xi-bray" },
-      { "title": "Karaoke Có Bè | Tệ Hại & Xấu Xí | B Ray | \"UNhiddenGem\" Mixtape", "id": "te-hai-xau-xi-bray-co-be" }
-    ]
-  },
-  {
     "youtubeID": "A_Xt8vxiSB0",
     "priority": "30.000đ",
     "request": "Bè tiếng Anh",
@@ -25,13 +15,13 @@
   { "youtubeID": "S6NbybMTPU4", "priority": "20.000đ", "note": "DUONG NGUYEN QUANG HUY", "uploadDate": "06:00 23/06/2026", "previews": [{ "title": "Karaoke | FELINA | B Ray | \"UNhiddenGem\" Mixtape", "id": "felina-bray" }] },
   { "youtubeID": "OtnQyqb6-nM", "priority": "20.000đ", "uploadDate": "6:00 09/08/2025", "uploadedLink": "https://youtu.be/AqV02uWUZYI", "note": "BUI DANG THINH HUNG" },
   { "youtubeID": "nAvmPdtX9JE", "request": "Có hook", "note": "@duongnguyenquanghuy1754" },
-  { "youtubeID": "OGQsXBl1SPg", "date": "22:30 09/05/2026", "note": "@at-sn7ny" },
+  { "youtubeID": "OGQsXBl1SPg", "date": "11:30 05/06/2026", "note": "@at-sn7ny" },
   { "youtubeID": "gCP41vACnAw", "note": "@ngonguyenthuyduong" },
   { "youtubeID": "rTonHEpq8eA", "date": "6:25 20/05/2026", "note": "@BảoPhạmViệtGia, @phuthinhlenguyen7856" },
   { "youtubeID": "7C9XPAzk6jY", "date": "11:29 25/05/2026", "note": "@GiaBaoNguyenTran-oz6tr" },
   { "youtubeID": "OAP2Y0ooiKo", "date": "11:29 25/05/2026", "note": "@minhtruonghoang2995" },
-  { "youtubeID": "4ZFezhS5hZs", "date": "21:40 25/05/2026", "note": "@trongtantran2028" },
-  { "youtubeID": "5PvzGDU8WjM", "date": "21:43 25/05/2026", "note": "@trongtantran2028" },
+  { "youtubeID": "4ZFezhS5hZs", "date": "10:48 06/06/2026", "request": "Có giọng nữ", "note": "@trongtantran2028" },
+  { "youtubeID": "5PvzGDU8WjM", "date": "10:48 06/06/2026", "note": "@trongtantran2028" },
   { "youtubeID": "1qPDgh6ntkE", "date": "22:37 26/05/2026", "note": "@Keane-d1r" },
   { "youtubeID": "O_vzVAKTsV8", "date": "08:19 03/06/2026", "note": "@MinhChung-n8z" },
   { "youtubeID": "z5GrABuBWsw", "date": "21:16 28/05/2026", "note": "@nguyenviettai9235" },
