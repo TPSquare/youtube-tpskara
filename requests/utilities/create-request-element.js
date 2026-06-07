@@ -122,15 +122,15 @@ export default async function createRequestElement(request, language) {
     doneElement.textContent = config.uploadDate;
     doneElement.title = `${language.requestElement.uploadVideo.replace("{Xday}", config.uploadDate)}!`;
     floatElement.appendChild(doneElement);
-    addNoOrder();
 
     const uploadDate = dateStringToObject(config.uploadDate);
     const now = new Date();
     if (now > uploadDate) {
       isUploaded = true;
+      addNoOrder();
+
       doneElement.textContent = language.requestElement.uploaded;
       doneElement.removeAttribute("title");
-
       if (config.uploadedLink) {
         doneElement.classList.add("uploaded-link");
         doneElement.onclick = () =>
