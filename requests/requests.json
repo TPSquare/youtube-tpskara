@@ -1,5 +1,4 @@
 [
-  { "youtubeID": "kZnpzY7A1u4", "priority": "15.000đ", "note": "Nguyễn Đình Tuấn", "request": "Có hook", "uploadDate": "06:00 11/06/2026" },
   {
     "youtubeID": "A_Xt8vxiSB0",
     "priority": "30.000đ",
@@ -14,7 +13,7 @@
   { "youtubeID": "EUzSudL28FQ", "priority": "30.000đ", "note": "Phạm Thanh Nhàn", "uploadDate": "06:00 22/06/2026", "previews": [{ "title": "Karaoke | MUỐN THÌ CHƠI | KILLI ft. playboicamau", "id": "muon-thi-choi-killi" }] },
   { "youtubeID": "ERABWON9Qck", "priority": "25.000đ", "note": "DUONG NGUYEN QUANG HUY", "uploadDate": "06:00 23/06/2026", "previews": [{ "title": "Karaoke | CHO CON | B Ray | \"UNhiddenGem\" Mixtape", "id": "cho-con-bray" }] },
   { "youtubeID": "S6NbybMTPU4", "priority": "20.000đ", "note": "DUONG NGUYEN QUANG HUY", "uploadDate": "06:00 23/06/2026", "previews": [{ "title": "Karaoke | FELINA | B Ray | \"UNhiddenGem\" Mixtape", "id": "felina-bray" }] },
-  { "youtubeID": "OGQsXBl1SPg", "date": "11:30 05/06/2026", "note": "@at-sn7ny" },
+  { "youtubeID": "OGQsXBl1SPg", "note": "@at-sn7ny", "uploadDate": "06:00 12/06/2026" },
   { "youtubeID": "gCP41vACnAw", "note": "@ngonguyenthuyduong" },
   { "youtubeID": "rTonHEpq8eA", "date": "6:25 20/05/2026", "note": "@BảoPhạmViệtGia, @phuthinhlenguyen7856" },
   { "youtubeID": "7C9XPAzk6jY", "date": "11:29 25/05/2026", "note": "@GiaBaoNguyenTran-oz6tr" },
@@ -22,7 +21,7 @@
   { "youtubeID": "4ZFezhS5hZs", "date": "10:48 06/06/2026", "request": "Có giọng nữ", "note": "@trongtantran2028" },
   { "youtubeID": "5PvzGDU8WjM", "date": "10:48 06/06/2026", "note": "@trongtantran2028" },
   { "youtubeID": "1qPDgh6ntkE", "date": "22:37 26/05/2026", "note": "@Keane-d1r" },
-  { "youtubeID": "O_vzVAKTsV8", "date": "08:19 03/06/2026", "note": "@MinhChung-n8z" },
+  { "youtubeID": "O_vzVAKTsV8", "date": "16:44 11/06/2026", "note": "@MinhChung-n8z" },
   { "youtubeID": "z5GrABuBWsw", "date": "21:16 28/05/2026", "note": "@nguyenviettai9235" },
   { "youtubeID": "dz6xe0xXqYE", "date": "10:03 21/05/2026", "note": "@laitruong7922" },
   { "youtubeID": "M7UlJ0m-yy4", "date": "10:04 21/05/2026", "note": "@laitruong7922" },
