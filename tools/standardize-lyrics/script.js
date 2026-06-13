@@ -21,7 +21,7 @@ class Standardize {
           res.push(value);
           break;
         } else if (value[i].toLowerCase() !== value[i]) {
-          if (value[i - 1] !== " " && value[i - 1].toLowerCase() !== value[i - 1]) continue;
+          if (value[i - 1] !== " ") continue;
           res.push(value.slice(0, i - 1));
           value = value.slice(i);
           i = 0;
