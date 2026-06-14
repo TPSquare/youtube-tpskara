@@ -1,5 +1,4 @@
 [
-  { "youtubeID": "pxAiwZlzSD8", "priority": "20.000đ", "note": "PHAM NGUYEN UYEN KHANH", "uploadDate": "06:00 14/06/2026" },
   { "youtubeID": "EUzSudL28FQ", "priority": "30.000đ", "note": "Phạm Thanh Nhàn", "uploadDate": "06:00 22/06/2026", "previews": [{ "title": "Karaoke | MUỐN THÌ CHƠI | KILLI ft. playboicamau", "id": "muon-thi-choi-killi" }] },
   { "youtubeID": "ERABWON9Qck", "priority": "25.000đ", "note": "DUONG NGUYEN QUANG HUY", "uploadDate": "06:00 23/06/2026", "previews": [{ "title": "Karaoke | CHO CON | B Ray | \"UNhiddenGem\" Mixtape", "id": "cho-con-bray" }] },
   { "youtubeID": "S6NbybMTPU4", "priority": "20.000đ", "note": "DUONG NGUYEN QUANG HUY", "uploadDate": "07:00 23/06/2026", "previews": [{ "title": "Karaoke | FELINA | B Ray | \"UNhiddenGem\" Mixtape", "id": "felina-bray" }] },
@@ -15,5 +14,7 @@
   { "youtubeID": "dz6xe0xXqYE", "date": "10:03 21/05/2026", "note": "@laitruong7922" },
   { "youtubeID": "M7UlJ0m-yy4", "date": "10:04 21/05/2026", "note": "@laitruong7922" },
   { "youtubeID": "vdX6DwxyVvc", "date": "10:05 21/05/2026", "note": "@laitruong7922" },
-  { "youtubeID": "3uyno09gQLw", "date": "10:05 21/05/2026", "note": "@laitruong7922" }
+  { "youtubeID": "3uyno09gQLw", "date": "10:05 21/05/2026", "note": "@laitruong7922" },
+  { "youtubeID": "QxXYWMIQAcQ", "date": "08:32 14/06/2026", "note": "@Chien22gaming" },
+  { "youtubeID": "zB97jESFuYE", "date": "08:33 14/06/2026", "note": "@Ronaldinho6789" }
 ]
