@@ -2,6 +2,7 @@ import getVideoData from "./get-video-data.js";
 import calculateTheRemainingTime from "./calculate-the-remaining-time.js";
 import environment from "../../internal/configs/environment.js";
 import dateStringToObject from "./date-string-to-object.js";
+import standardizeYoutubeDate from "./standardize-youtube-date.js";
 
 const EXPIRATION = 30;
 
@@ -21,7 +22,7 @@ export default async function createRequestElement(request, language) {
     priorities:
       request.priorities || (request.priority ? [request.priority] : undefined),
     date: request.date, // hh:mm dd/mm/yyyy
-    uploadDate: request.uploadDate, // hh:mm dd/mm/yyyy
+    uploadDate: standardizeYoutubeDate(request.uploadDate), // hh:mm dd/mm/yyyy
     uploadedLink: request.uploadedLink,
     cancel: request.cancel,
     previews: request.previews,
