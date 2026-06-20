@@ -1,7 +1,6 @@
 [
-  { "youtubeID": "4ZFezhS5hZs", "uploadDate": "06:00 20 tháng 6, 2026", "request": "Có giọng nữ", "note": "@trongtantran2028" },
-  { "youtubeID": "N8Pm_Swd1Pw", "priority": "30.000đ", "note": "HO THE PHUONG" },
-  { "youtubeID": "EzosO32NPI4", "priority": "15.000đ", "request": "Có hook lớn", "note": "Nguyễn Đình Tuấn" },
+  { "youtubeID": "N8Pm_Swd1Pw", "priority": "30.000đ", "note": "HO THE PHUONG", "uploadDate": "06:00 21 tháng 6, 2026" },
+  { "youtubeID": "EzosO32NPI4", "priority": "15.000đ", "request": "Có hook lớn", "note": "Nguyễn Đình Tuấn", "uploadDate": "07:00 21 tháng 6, 2026" },
   { "youtubeID": "EUzSudL28FQ", "priority": "30.000đ", "note": "Phạm Thanh Nhàn", "uploadDate": "06:00 22/06/2026", "previews": [{ "title": "Karaoke | MUỐN THÌ CHƠI | KILLI ft. playboicamau", "id": "muon-thi-choi-killi" }] },
   { "youtubeID": "ERABWON9Qck", "priority": "25.000đ", "note": "DUONG NGUYEN QUANG HUY", "uploadDate": "06:00 23/06/2026", "previews": [{ "title": "Karaoke | CHO CON | B Ray | \"UNhiddenGem\" Mixtape", "id": "cho-con-bray" }] },
   { "youtubeID": "S6NbybMTPU4", "priority": "20.000đ", "note": "DUONG NGUYEN QUANG HUY", "uploadDate": "07:00 23/06/2026", "previews": [{ "title": "Karaoke | FELINA | B Ray | \"UNhiddenGem\" Mixtape", "id": "felina-bray" }] },
