@@ -14,6 +14,7 @@
     "uploadVideo": "Video sẽ được đăng tải vào lúc {Xday}",
     "uploaded": "Đã tải lên",
     "expired": "Đã hết hạn",
+    "waitingUpload": "Đang chờ ngày tải lên",
     "time": {
       "days": "ngày",
       "hours": "giờ",

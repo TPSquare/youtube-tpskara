@@ -37,9 +37,7 @@ import environment from "../internal/configs/environment.js";
 import createRequestElement from "./utilities/create-request-element.js";
 (async () => {
   const requestsListElement = document.getElementById("requests-list");
-  const requests = await fetch(`./requests.json?t=${Date.now()}`)
-    .then((res) => res.json())
-    .then((reqs) => reqs.map(({ request, ...rest }) => ({ requestText: request, ...rest })));
+  const requests = await fetch(`./requests.json?t=${Date.now()}`).then((res) => res.json());
 
   if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
 

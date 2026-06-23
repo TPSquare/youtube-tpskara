@@ -14,26 +14,25 @@ export default async function createRequestElement(request, language) {
   requestsListElement.appendChild(requestElement);
 
   const config = {
-    // To find out what the configuration includes.
-    title: request.title,
-    thumbnailUrl: request.thumbnailUrl,
-    link: request.link,
-    request: request.requestText,
-    priorities:
-      request.priorities || (request.priority ? [request.priority] : undefined),
-    date: request.date, // hh:mm dd/mm/yyyy
-    uploadDate: standardizeYoutubeDate(request.uploadDate), // hh:mm dd/mm/yyyy
-    uploadedLink: request.uploadedLink,
-    cancel: request.cancel,
-    previews: request.previews,
+    // To find out what the configuration includes
+    title: request.title, // Video title
+    thumbnailUrl: request.thumbnailUrl, // Link to video thumbnail
+    link: request.link, // Link to the video
+    request: request.request, // Viewer's request
+    priorities: request.priorities || (request.priority && [request.priority]), // The priorities of the request
+    recordDate: request.recordDate, // Time the request was recorded   [hh:mm dd/mm/yyyy]
+    waitingUpload: request.waitingUpload, // Waiting for the upload date [bool]
+    uploadDate: standardizeYoutubeDate(request.uploadDate), // The time the karaoke video was uploaded   [hh:mm dd/mm/yyyy]
+    uploadedID: request.uploadedID, // ID of the uploaded karaoke video
+    cancel: request.cancel, // Reason for canceling the request
+    previews: request.previews, // Previews   [{title, id}]
   };
   if (request.youtubeID) {
     requestElement.onclick = () => console.log(request.youtubeID);
     const videoData = await getVideoData(request.youtubeID);
     config.title = videoData.title;
     config.thumbnailUrl = videoData.thumbnailUrl;
-    if (environment !== "development")
-      config.link = `https://youtu.be/${request.youtubeID}`;
+    if (environment !== "development") config.link = `https://youtu.be/${request.youtubeID}`;
   }
   let isUploaded = false;
 
@@ -48,8 +47,7 @@ export default async function createRequestElement(request, language) {
 
   const thumbnailElement = document.createElement("img");
   thumbnailElement.src =
-    config.thumbnailUrl ||
-    "https://tse4.mm.bing.net/th/id/OIP._k-Rbbqjzn5_zofRRV46YgHaEh";
+    config.thumbnailUrl || "https://tse4.mm.bing.net/th/id/OIP._k-Rbbqjzn5_zofRRV46YgHaEh";
   thumbnailElement.alt = config.title;
   boxElement.appendChild(thumbnailElement);
 
@@ -99,8 +97,8 @@ export default async function createRequestElement(request, language) {
     }
   }
 
-  if (config.date) {
-    const remainingData = calculateTheRemainingTime(config.date, EXPIRATION);
+  if (config.recordDate) {
+    const remainingData = calculateTheRemainingTime(config.recordDate, EXPIRATION);
     if (remainingData.isExpired) {
       addCancel(language.requestElement.expired);
     } else {
@@ -109,8 +107,7 @@ export default async function createRequestElement(request, language) {
       floatElement.appendChild(remainingElement);
 
       const keyInUsed =
-        Object.keys(remainingData).find((key) => remainingData[key] > 0) ||
-        "seconds";
+        Object.keys(remainingData).find((key) => remainingData[key] > 0) || "seconds";
       if (remainingData.days && remainingData.hours >= 12) ++remainingData.days;
       remainingElement.textContent = `${remainingData[keyInUsed]} ${language.requestElement.time[keyInUsed]}`;
       remainingElement.title = `${language.requestElement.expireRequest.replace("{Xday}", remainingElement.textContent)}!`;
@@ -132,12 +129,19 @@ export default async function createRequestElement(request, language) {
 
       doneElement.textContent = language.requestElement.uploaded;
       doneElement.removeAttribute("title");
-      if (config.uploadedLink) {
+      if (config.uploadedID) {
         doneElement.classList.add("uploaded-link");
         doneElement.onclick = () =>
-          (window.location.href = config.uploadedLink);
+          (window.location.href = `https://youtu.be/${config.uploadedID}`);
       }
     }
+  }
+
+  if (config.waitingUpload) {
+    const waitingElement = document.createElement("div");
+    waitingElement.className = "waiting";
+    waitingElement.textContent = language.requestElement.waitingUpload;
+    floatElement.appendChild(waitingElement);
   }
 
   if (config.cancel) addCancel(config.cancel);

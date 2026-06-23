@@ -265,6 +265,11 @@ main {
   color: #f1f1f1;
 }
 
+#requests-list .float .waiting {
+  background-color: darkorange;
+  color: white;
+}
+
 #requests-list .float .done.uploaded-link:hover {
   text-decoration: underline;
   cursor: pointer;

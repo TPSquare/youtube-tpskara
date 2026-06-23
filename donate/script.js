@@ -2,7 +2,9 @@ import getLanguages from "../internal/utilities/get-languages.js";
 
 const languages = await getLanguages();
 document.getElementById("title").textContent = languages.noticesTitle + ":";
-document.getElementById("notices").innerHTML = languages.notices.map((e) => `<div>${e}</div>`);
+document.getElementById("notices").innerHTML = languages.notices
+  .map((e) => `<div>${e}</div>`)
+  .join("");
 
 const api = `./notices-verison.json?t=${Date.now()}`;
 const noticesVersion = await fetch(api).then((res) => res.json());
