@@ -154,7 +154,8 @@ main {
 }
 
 #requests #copyright-strike {
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
+  line-height: 1.5em;
 }
 #requests #copyright-strike.hidden {
   display: none;
