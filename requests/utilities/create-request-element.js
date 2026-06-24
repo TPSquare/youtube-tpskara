@@ -118,7 +118,7 @@ export default async function createRequestElement(request, language) {
     const doneElement = document.createElement("div");
     doneElement.className = "done";
     doneElement.textContent = config.uploadDate;
-    doneElement.title = `${language.requestElement.uploadVideo.replace("{Xday}", config.uploadDate)}!`;
+    doneElement.title = `${language.requestElement.uploadVideo.replace("{Xdate}", config.uploadDate)}!`;
     floatElement.appendChild(doneElement);
 
     const uploadDate = dateStringToObject(config.uploadDate);

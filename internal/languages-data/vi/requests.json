@@ -11,7 +11,7 @@
   "requestElement": {
     "request": "Yêu cầu",
     "expireRequest": "Yêu cầu sẽ hết hạn sau {Xday} nữa",
-    "uploadVideo": "Video sẽ được đăng tải vào lúc {Xday}",
+    "uploadVideo": "Video sẽ được đăng tải vào lúc {Xdate}",
     "uploaded": "Đã tải lên",
     "expired": "Đã hết hạn",
     "waitingUpload": "Đang chờ ngày tải lên",
@@ -22,5 +22,7 @@
       "seconds": "giây"
     },
     "preview": "Xem trước"
-  }
+  },
+  "copyrightStrike": "Cảnh cáo vi phạm bản quyền",
+  "copyrightNotice": "Kênh không thể đăng video cho đến hết ngày {Xdate}"
 }

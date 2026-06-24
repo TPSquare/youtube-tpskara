@@ -153,6 +153,22 @@ main {
   color: dodgerblue;
 }
 
+#requests #copyright-strike {
+  margin-bottom: 1em;
+}
+#requests #copyright-strike.hidden {
+  display: none;
+}
+
+#requests #copyright-strike .reason {
+  color: #ff8983;
+  background-color: rgba(255, 137, 131, 0.25);
+  font-weight: 500;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25em;
+  font-size: 0.9em;
+}
+
 #requests-list .request {
   position: relative;
   padding-left: 0.5em;

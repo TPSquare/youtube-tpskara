@@ -11,7 +11,7 @@
   "requestElement": {
     "request": "Request",
     "expireRequest": "The request will expire in {Xday}",
-    "uploadVideo": "The video will be uploaded at {Xday}",
+    "uploadVideo": "The video will be uploaded at {Xdate}",
     "uploaded": "Uploaded",
     "expired": "Expired",
     "waitingUpload": "Waiting for the upload date",
@@ -22,5 +22,7 @@
       "seconds": "seconds"
     },
     "preview": "Preview"
-  }
+  },
+  "copyrightStrike": "Copyright strike",
+  "copyrightNotice": "The channel cannot upload videos until the end of {Xdate}"
 }

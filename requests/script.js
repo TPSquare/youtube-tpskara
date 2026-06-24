@@ -48,6 +48,16 @@ import createRequestElement from "./utilities/create-request-element.js";
     .forEach((order, index) => (order.textContent = index + 1));
 })();
 
+(async () => {
+  const copyrightStrike = await fetch("./copyright-strike.json").then((res) => res.json());
+  if (copyrightStrike.length === 0) return;
+  const copyrightStrikeElement = document.getElementById("copyright-strike");
+  copyrightStrikeElement.classList.remove("hidden");
+  copyrightStrikeElement.querySelector(".reason").textContent = language.copyrightStrike;
+  copyrightStrikeElement.querySelector(".result").textContent =
+    language.copyrightNotice.replace("{Xdate}", copyrightStrike[0]) + "!";
+})();
+
 (() => {
   const sidebarElement = document.getElementById("sidebar");
 
