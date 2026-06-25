@@ -1,8 +1,8 @@
 [
   { "youtubeID": "4_VbjN0kAfw", "note": "@HoaLe-rk2ke", "waitingUpload": true, "previews": [{ "title": "Karaoke | MAMA BOY | AMEE | \"dreAMEE\" Album", "id": "mama-boy-amee" }] },
-  { "youtubeID": "LAfAl4akeCk", "priority": "Yêu cầu may mắn (3/3)", "note": "@TienNguyen.126" },
+  { "youtubeID": "LAfAl4akeCk", "note": "@TienNguyen.126", "waitingUpload": true, "previews": [{ "title": "Karaoke | MẠNG XÃ HỘI | SIRO x PHONG CẬN x MRVIT ft. QTBEATZ", "id": "mang-xa-hoi-siro-phong-can-mrvit" }] },
   { "youtubeID": "5PvzGDU8WjM", "recordDate": "23:33 20/06/2026", "note": "@trongtantran2028" },
-  { "youtubeID": "1qPDgh6ntkE", "recordDate": "22:37 28/05/2026", "note": "@Keane-d1r" },
+  { "youtubeID": "1qPDgh6ntkE", "recordDate": "22:37 29/05/2026", "note": "@Keane-d1r" },
   { "youtubeID": "O_vzVAKTsV8", "recordDate": "16:44 11/06/2026", "note": "@MinhChung-n8z" },
   { "youtubeID": "z5GrABuBWsw", "recordDate": "21:16 02/06/2026", "note": "@nguyenviettai9235" },
   { "youtubeID": "dz6xe0xXqYE", "recordDate": "11:09 22/06/2026", "note": "@laitruong7922" },
@@ -18,5 +18,6 @@
   { "youtubeID": "O2ZfBvJAt94", "recordDate": "09:44 23/06/2026", "note": "@HoaLe-rk2ke" },
   { "youtubeID": "iexpjQQC1-g", "recordDate": "17:56 24/06/2026", "note": "@MinhTran-hb7go" },
   { "youtubeID": "M95nKxgfJDc", "recordDate": "17:59 24/06/2026", "note": "@hihihi.08-53" },
-  { "youtubeID": "JRi0DHAIlcw", "recordDate": "18:00 24/06/2026", "note": "@BiRennnOOO" }
+  { "youtubeID": "JRi0DHAIlcw", "recordDate": "18:00 24/06/2026", "note": "@BiRennnOOO" },
+  { "youtubeID": "eY8IZVXsJaQ", "recordDate": "11:42 25/06/2026", "note": "@kakakaka26-nh3" }
 ]

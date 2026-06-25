@@ -41,3 +41,5 @@ Communication.createText("en-thank-donation");
 Communication.addHorizontalSpace();
 Communication.createText("vi-1-month");
 Communication.createText("en-1-month");
+Communication.addHorizontalSpace();
+Communication.createText("vi-hieuthuhai");
