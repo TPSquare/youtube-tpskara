@@ -25,7 +25,7 @@ export default async function createRequestElement(request, language) {
     uploadDate: standardizeYoutubeDate(request.uploadDate), // The time the karaoke video was uploaded   [hh:mm dd/mm/yyyy]
     uploadedID: request.uploadedID, // ID of the uploaded karaoke video
     cancel: request.cancel, // Reason for canceling the request
-    previews: request.previews, // Previews   [{title, id}]
+    previews: request.previews || (request.preview && [request.preview]), // Previews   [{title, id}]
   };
   if (request.youtubeID) {
     requestElement.onclick = () => console.log(request.youtubeID);
