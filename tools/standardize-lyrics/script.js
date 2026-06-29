@@ -1,4 +1,5 @@
 const sensitiveMap = await fetch(`./sensitive-map.json?t=${Date.now()}`).then((res) => res.json());
+const replaceMap = await fetch(`./replace-map.json?t=${Date.now()}`).then((res) => res.json());
 
 const textarea = document.getElementById("input");
 const standardizeBtn = document.body.querySelector("#standardize-btn-wrapper button");
@@ -6,6 +7,7 @@ const standardizeBtn = document.body.querySelector("#standardize-btn-wrapper but
 standardizeBtn.onclick = () => {
   Standardize.clearTimeline();
   Standardize.separatedIntoLines();
+  Standardize.replaceMissWords();
   Standardize.disguiseSensitiveWords();
 };
 
@@ -47,5 +49,9 @@ class Standardize {
   static clearTimeline() {
     const timeRegex = /(\d+\s?phút,\s?)?\d+\s?giây|\d{1,2}:\d{2}/gm;
     textarea.value = textarea.value.replace(timeRegex, "");
+  }
+
+  static replaceMissWords() {
+    for (const key in replaceMap) textarea.value = textarea.value.replaceAll(key, replaceMap[key]);
   }
 }
