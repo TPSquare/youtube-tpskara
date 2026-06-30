@@ -3,7 +3,10 @@
   "vietnam": "Việt Nam",
   "thank": "Cảm ơn các bạn đã ủng hộ kênh mình!",
   "listOfRequests": "Danh sách các yêu cầu",
-  "notesToListOfRequests": [],
+  "requestNotes": [
+    "Hiện tại kênh mình đang liên tục nhận các cảnh báo bản quyền liên quan đến các bài hát của HIEUTHUHAI.",
+    "Vì vậy, \"KHÔNG THỂ SAY (SÓNG 24)\" sẽ là video cuối cùng được đăng tải để mình có thể ưu tiên phát hành toàn bộ các video đã hoàn thiện trước khi kênh có thể nhận thêm cảnh báo bản quyền."
+  ],
   "emptyOfRequests": "Hiện không có yêu cầu nào được ghi nhận trên kênh TPSKara",
   "subscribers": "Người đăng ký",
   "videos": "Video",

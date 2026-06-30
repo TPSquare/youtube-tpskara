@@ -14,8 +14,8 @@ const language = await getLanguages();
   insertText("#requests-list .empty", language.emptyOfRequests + "...");
 
   const insertHTML = (query, html) => (document.body.querySelector(query).innerHTML = html);
-  const notesToListOfRequestsHTML = language.notesToListOfRequests.map((e) => `<div>${e}</div>`);
-  insertHTML("#requests > .informations", notesToListOfRequestsHTML.join());
+  const requestNotesList = language.requestNotes.map((e) => `<div>${e}</div>`).join("");
+  insertHTML("#requests > .informations", requestNotesList);
 })();
 
 import environment from "../internal/configs/environment.js";
