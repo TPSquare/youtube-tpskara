@@ -7,15 +7,11 @@
 }
 
 body {
+  display: flex;
   background-color: #0f0f0f;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   font-family: "Roboto", sans-serif;
-}
-
-main {
-  display: flex;
-  height: 100vh;
 }
 
 #about {
@@ -111,20 +107,20 @@ main {
   margin-bottom: 0.25em;
 }
 
-#content-box {
-  font-size: 16px;
+main {
   flex: 1;
   overflow-y: auto;
   padding-inline: 1.25em;
   padding-top: 2em;
+  font-size: 16px;
+}
+
+main .margin {
+  height: 150px;
 }
 
 #requests {
   width: 100%;
-}
-
-#content-box .margin {
-  height: 150px;
 }
 
 #requests .divider {
@@ -324,32 +320,6 @@ main {
   text-align: center;
 }
 
-#sidebar {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  padding-block: 10px;
-  width: 60px;
-  height: 100%;
-  border-right: 1px solid #ffffff33;
-}
-
-#sidebar > button {
-  width: 70%;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-}
-
-#sidebar > button > img {
-  display: block;
-  width: 100%;
-}
-
-#sidebar > button > * {
-  pointer-events: none;
-}
-
 #overlay {
   position: fixed;
   inset: 0;
@@ -364,26 +334,46 @@ main {
   pointer-events: all;
 }
 
-#tool-bar {
+#topbar {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
 }
 
-#tool-bar button {
+#topbar .about-button {
+  display: none;
+  font-size: 1em;
+  height: 2em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+#topbar .about-button img {
+  display: block;
+  width: 2em;
+  pointer-events: none;
+}
+
+#topbar .text-button {
   font-family: "Roboto", sans-serif;
   font-size: 0.9em;
   font-weight: 500;
-  color: #f1f1f1;
-  background-color: #323232;
   border: none;
   border-radius: 0.5em;
   padding: 0.5em 0.75em;
   cursor: pointer;
 }
 
+#topbar .change-language {
+  color: #f1f1f1;
+  background-color: #323232;
+}
+
 @media (max-width: 992px) {
-  #sidebar {
-    display: flex;
+  #topbar .about-button {
+    display: block;
   }
 
   #about {
@@ -403,31 +393,23 @@ main {
 }
 
 @media (max-width: 768px) {
-  #sidebar {
-    width: 55px;
-  }
-
-  #content-box {
+  main {
     font-size: 15px;
   }
 }
 
 @media (max-width: 576px) {
-  #sidebar {
-    width: 50px;
-  }
-
   #about {
     font-size: 13px;
   }
 
-  #content-box {
+  main {
     font-size: 14px;
     padding: 0.6em;
     --ms-overflow-style: none;
     scrollbar-width: none;
   }
-  #content-box::-webkit-scrollbar {
+  main::-webkit-scrollbar {
     display: none;
   }
 
@@ -437,27 +419,23 @@ main {
 }
 
 @media (max-width: 400px) {
-  #sidebar {
-    width: 45px;
-  }
-
   #about {
     font-size: 12px;
     padding-block: 2em;
   }
 
-  #content-box {
+  main {
     font-size: 13px;
   }
 }
 
 @media (max-width: 300px) {
-  #sidebar {
-    display: none;
+  main {
+    font-size: 12px;
   }
 
-  #content-box {
-    font-size: 12px;
+  #topbar .about-button {
+    display: none;
   }
 }
 

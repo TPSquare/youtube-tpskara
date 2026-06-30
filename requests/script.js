@@ -59,13 +59,13 @@ import createRequestElement from "./utilities/create-request-element.js";
 })();
 
 (() => {
-  const sidebarElement = document.getElementById("sidebar");
+  const aboutButton = document.body.querySelector("#topbar .about-button");
+  const aboutElement = document.getElementById("about");
 
   const overlayElement = document.getElementById("overlay");
   overlayElement.addEventListener("click", () => overlayElement.classList.remove("show"));
 
-  const aboutElement = document.getElementById("about");
-  sidebarElement.querySelector(".about").onclick = () => {
+  aboutButton.onclick = () => {
     aboutElement.classList.toggle("show");
     overlayElement.classList.toggle("show");
     overlayElement.onclick = () => aboutElement.classList.remove("show");
@@ -78,5 +78,5 @@ import createRequestElement from "./utilities/create-request-element.js";
 })();
 
 (() => {
-  document.body.querySelector("#tool-bar .change-language").onclick = gotoChooseLanguages;
+  document.body.querySelector("#topbar .change-language").onclick = gotoChooseLanguages;
 })();
