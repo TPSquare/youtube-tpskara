@@ -9,6 +9,7 @@ standardizeBtn.onclick = () => {
   Standardize.separatedIntoLines();
   Standardize.replaceMissWords();
   Standardize.disguiseSensitiveWords();
+  Standardize.normalizeSpaces();
 };
 
 class Standardize {
@@ -53,5 +54,12 @@ class Standardize {
 
   static replaceMissWords() {
     for (const key in replaceMap) textarea.value = textarea.value.replaceAll(key, replaceMap[key]);
+  }
+
+  static normalizeSpaces(str) {
+    const lines = textarea.value.split("\n");
+    const replacedLines = lines.map((e) => e.trim().split(/\s+/).join(" "));
+    const resultLines = replacedLines.filter((e) => e.length != 0);
+    textarea.value = resultLines.join("\n");
   }
 }
