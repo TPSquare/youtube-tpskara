@@ -1,6 +1,16 @@
 [
   { "youtubeID": "-xS7LoAkYL0", "priority": "138.000đ", "note": "TRUONG NGUYEN QUOC KHANG", "waitingUpload": true, "preview": { "title": "Karaoke | THOUGHTS OF A KID | Right x Rain$", "id": "thoughts-of-a-kid-right" } },
-  { "youtubeID": "y2bSu-vLd9Q", "priority": "16.683đ", "note": "LE DUC NHAT TRUNG", "request": "Bè nhỏ giọng nữ" },
+  {
+    "youtubeID": "y2bSu-vLd9Q",
+    "priority": "16.683đ",
+    "note": "LE DUC NHAT TRUNG",
+    "request": "Bè nhỏ giọng nữ",
+    "waitingUpload": true,
+    "previews": [
+      { "title": "Karaoke Bè Giọng Nữ | ÂM TÍNH 0 | Ronboogz ft. Lumee | #ChuyenXua", "id": "am-tinh-0-ronboogz-lumee-be-giong-nu" },
+      { "title": "Karaoke Song Ca | ÂM TÍNH 0 | Ronboogz ft. Lumee | #ChuyenXua", "id": "am-tinh-0-ronboogz-lumee-song-ca" }
+    ]
+  },
   { "youtubeID": "4_VbjN0kAfw", "waitingUpload": true, "preview": { "title": "Karaoke | MAMA BOY | AMEE | \"dreAMEE\" Album", "id": "mama-boy-amee" } },
   { "youtubeID": "LAfAl4akeCk", "waitingUpload": true, "preview": { "title": "Karaoke | MẠNG XÃ HỘI | SIRO x PHONG CẬN x MRVIT ft. QTBEATZ", "id": "mang-xa-hoi-siro-phong-can-mrvit" } },
   { "youtubeID": "1qPDgh6ntkE", "waitingUpload": true, "preview": { "title": "Karaoke | NHỚ EM'S | ROCKY CDE ft. KHAN", "id": "nho-em-rocky-cde-khan" } },
@@ -30,5 +40,4 @@
   { "youtubeID": "3zyoPRYf4i0", "recordDate": "07:02 04/07/2026", "note": "@laitruong7922" },
   { "youtubeID": "D164TFHeOcI", "recordDate": "07:03 04/07/2026", "note": "@laitruong7922" },
   { "youtubeID": "rDpJfmBI9xQ", "recordDate": "07:04 04/07/2026", "note": "@113trung4" }
-  
 ]
