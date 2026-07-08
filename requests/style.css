@@ -137,6 +137,13 @@ main .margin {
   margin-bottom: 0.5em;
 }
 
+#requests > .title::after {
+  content: " " attr(data-note);
+  font-size: 0.75em;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
 #requests .informations {
   color: #aaaaaa;
 }

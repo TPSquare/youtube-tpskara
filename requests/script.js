@@ -1,7 +1,9 @@
 import gotoChooseLanguages from "../internal/utilities/goto-choose-languages.js";
-import getLanguages from "../internal/utilities/get-languages.js";
 
+import getLanguages from "../internal/utilities/get-languages.js";
 const language = await getLanguages();
+
+const requestsResponse = await fetch(`./requests.json?t=${Date.now()}`);
 
 (async () => {
   document.head.querySelector("title").textContent += language.listOfRequests;
@@ -37,7 +39,7 @@ import environment from "../internal/configs/environment.js";
 import createRequestElement from "./utilities/create-request-element.js";
 (async () => {
   const requestsListElement = document.getElementById("requests-list");
-  const requests = await fetch(`./requests.json?t=${Date.now()}`).then((res) => res.json());
+  const requests = await requestsResponse.json();
 
   if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
 
@@ -46,6 +48,22 @@ import createRequestElement from "./utilities/create-request-element.js";
   requestsListElement
     .querySelectorAll(".order:not(.no-order)")
     .forEach((order, index) => (order.textContent = index + 1));
+})();
+
+(async () => {
+  const lastModifiedHeader = requestsResponse.headers.get("Last-Modified");
+  const modifiedDate = new Date(lastModifiedHeader);
+  const modifiedText = modifiedDate.toLocaleString("vi-VN", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+  const lastUpdateText = `(${language.lastUpdate}: ${modifiedText})`;
+  document.body.querySelector(".title.list-title").setAttribute("data-note", lastUpdateText);
 })();
 
 (async () => {

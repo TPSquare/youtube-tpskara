@@ -24,5 +24,6 @@
     "preview": "Preview"
   },
   "copyrightStrike": "Copyright strike",
-  "copyrightNotice": "The channel cannot upload videos until the end of {Xdate}"
+  "copyrightNotice": "The channel cannot upload videos until the end of {Xdate}",
+  "lastUpdate": "Last updated"
 }
