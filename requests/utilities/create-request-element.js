@@ -3,6 +3,7 @@ import calculateTheRemainingTime from "./calculate-the-remaining-time.js";
 import environment from "../../internal/configs/environment.js";
 import dateStringToObject from "./date-string-to-object.js";
 import standardizeYoutubeDate from "./standardize-youtube-date.js";
+import getTitleFromVideoPage from "./get-title-from-video-page.js";
 
 const EXPIRATION = 30;
 
@@ -25,7 +26,7 @@ export default async function createRequestElement(request, language) {
     uploadDate: standardizeYoutubeDate(request.uploadDate), // The time the karaoke video was uploaded   [hh:mm dd/mm/yyyy]
     uploadedID: request.uploadedID, // ID of the uploaded karaoke video
     cancel: request.cancel, // Reason for canceling the request
-    previews: request.previews || (request.preview && [request.preview]), // Previews   [{title, id}]
+    previewIDs: request.previewIDs || (request.previewID && [request.previewID]), // Previews
   };
   if (request.youtubeID) {
     requestElement.onclick = () => console.log(request.youtubeID);
@@ -146,7 +147,7 @@ export default async function createRequestElement(request, language) {
 
   if (config.cancel) addCancel(config.cancel);
 
-  if (config.previews && !isUploaded) {
+  if (config.previewIDs && !isUploaded) {
     const previewsElement = document.createElement("div");
     previewsElement.className = "previews";
     requestElement.appendChild(previewsElement);
@@ -156,10 +157,10 @@ export default async function createRequestElement(request, language) {
     titleElement.textContent = language.requestElement.preview + ":";
     previewsElement.appendChild(titleElement);
 
-    for (const preview of config.previews) {
+    for (const previewID of config.previewIDs) {
       const itemElement = document.createElement("a");
-      itemElement.textContent = preview.title;
-      itemElement.href = `../videos/${preview.id}.html`;
+      getTitleFromVideoPage(previewID).then((title) => (itemElement.textContent = title));
+      itemElement.href = `../videos/${previewID}.html`;
       previewsElement.appendChild(itemElement);
     }
   }
