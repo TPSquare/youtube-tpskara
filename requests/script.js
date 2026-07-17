@@ -93,18 +93,10 @@ import createRequestElement from "./utilities/create-request-element.js";
   searchInputElement.onfocus = searchInputElement.onkeyup;
 
   const generateResultHTML = (id, thumbnailUrl, title) =>
-    `<div class="result" onmousedown="searchScrollIntoView('${id}')">` +
+    `<div class="result" onmousedown="window.location.href = '#request-${id}'">` +
     `<img src="${thumbnailUrl}" alt="${title}">` +
     `<span>${title}</span>` +
     "</div>";
-
-  window.searchScrollIntoView = (id) => {
-    document.activeElement?.blur();
-    setTimeout(() => {
-      const targetElement = document.body.querySelector(`#requests-list .request.req-${id}`);
-      targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
-    }, 500);
-  };
 })();
 
 (async () => {
