@@ -37,8 +37,7 @@ export default async function createRequestElement(request, language, searchData
   searchData.push({ title: config.title, id: config.id, thumbnailUrl: config.thumbnailUrl });
 
   const requestElement = document.createElement("div");
-  requestElement.className = `request`;
-  requestElement.id = `request-${config.id}`;
+  requestElement.className = `request request-${config.id}`;
   requestsListElement.appendChild(requestElement);
 
   const boxElement = document.createElement("div");

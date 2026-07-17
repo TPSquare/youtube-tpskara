@@ -90,13 +90,35 @@ import createRequestElement from "./utilities/create-request-element.js";
     searchResultElement.innerHTML = resultHTML;
   };
 
-  searchInputElement.onfocus = searchInputElement.onkeyup;
+  searchInputElement.onfocus = () => {
+    searchResultElement.classList.add("show");
+    searchInputElement.onkeyup();
+  };
+
+  searchInputElement.onblur = () => {
+    setTimeout(() => searchResultElement.classList.remove("show"), 100);
+  };
 
   const generateResultHTML = (id, thumbnailUrl, title) =>
-    `<div class="result" onmousedown="window.location.href = '#request-${id}'">` +
+    `<div class="result" onmousedown="searchScrollIntoView('${id}')">` +
     `<img src="${thumbnailUrl}" alt="${title}">` +
     `<span>${title}</span>` +
     "</div>";
+
+  window.searchScrollIntoView = (id) => {
+    if (document.activeElement) document.activeElement.blur();
+    setTimeout(() => {
+      const mainElement = document.body.querySelector("main");
+      const targetElement = mainElement.querySelector(`.request.request-${id}`);
+
+      const mainHeight = mainElement.clientHeight;
+      const targetHeight = targetElement.offsetHeight;
+      const targetOffsetTop = targetElement.offsetTop;
+      const scrollTo = targetOffsetTop - mainHeight / 2 + targetHeight / 2;
+
+      mainElement.scrollTo({ top: scrollTo, behavior: "smooth" });
+    }, 500);
+  };
 })();
 
 (async () => {

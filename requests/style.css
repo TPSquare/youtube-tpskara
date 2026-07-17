@@ -172,7 +172,7 @@ main .margin {
   padding: 0.2em 0.4em;
   border-radius: 0.25em;
   font-size: 0.9em;
-} 
+}
 
 #requests-list .request {
   position: relative;
@@ -361,8 +361,7 @@ main .margin {
   border-radius: 0.5em;
   z-index: 10;
 }
-
-#search-input:focus-within + #search-result {
+#search-result.show {
   display: block;
 }
 
