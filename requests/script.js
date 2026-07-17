@@ -99,8 +99,11 @@ import createRequestElement from "./utilities/create-request-element.js";
     "</div>";
 
   window.searchScrollIntoView = (id) => {
-    const targetElement = document.body.querySelector(`#requests-list .request.req-${id}`);
-    targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+    document.activeElement?.blur();
+    setTimeout(() => {
+      const targetElement = document.body.querySelector(`#requests-list .request.req-${id}`);
+      targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 500);
   };
 })();
 
