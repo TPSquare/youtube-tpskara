@@ -44,12 +44,10 @@ import createRequestElement from "./utilities/create-request-element.js";
 
   if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
 
-  requests.forEach(async (request) => await createRequestElement(request, language, searchData));
-  setInterval(() => {
-    requestsListElement
-      .querySelectorAll(".order:not(.no-order)")
-      .forEach((order, index) => (order.textContent = index + 1));
-  }, 1000);
+  for (const request of requests) await createRequestElement(request, language, searchData);
+  requestsListElement
+    .querySelectorAll(".order:not(.no-order)")
+    .forEach((order, index) => (order.textContent = index + 1));
 })();
 
 (async () => {
