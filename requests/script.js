@@ -4,6 +4,7 @@ import getLanguages from "../internal/utilities/get-languages.js";
 const language = await getLanguages();
 
 const requestsResponse = await fetch(`./requests.json?t=${Date.now()}`);
+const searchData = [];
 
 (async () => {
   document.head.querySelector("title").textContent += language.listOfRequests;
@@ -43,7 +44,9 @@ import createRequestElement from "./utilities/create-request-element.js";
 
   if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
 
-  const createRequestPromises = requests.map((request) => createRequestElement(request, language));
+  const createRequestPromises = requests.map((request) =>
+    createRequestElement(request, language, searchData),
+  );
   await Promise.all(createRequestPromises);
   requestsListElement
     .querySelectorAll(".order:not(.no-order)")
@@ -59,11 +62,49 @@ import createRequestElement from "./utilities/create-request-element.js";
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
-    second: "2-digit",
     hour12: false,
   });
   const lastUpdateText = `(${language.lastUpdate}: ${modifiedText})`;
   document.body.querySelector(".title.list-title").setAttribute("data-note", lastUpdateText);
+})();
+
+(() => {
+  const searchInputElement = document.getElementById("search-input");
+  searchInputElement.setAttribute("placeholder", language.search);
+
+  const searchResultElement = document.getElementById("search-result");
+
+  const MAX_RESULT_LENGTH = 5;
+  searchInputElement.onkeyup = () => {
+    const value = searchInputElement.value.trim().toLowerCase();
+    const results = value
+      ? searchData.filter(({ title }) => title.toLowerCase().includes(value))
+      : [];
+    const missLength = MAX_RESULT_LENGTH - results.length;
+    for (let i = 0; i < missLength; i++) {
+      const filter = ({ id }) => !results.some(({ id: resID }) => id === resID);
+      const validSearchData = searchData.filter(filter);
+      results.push(validSearchData[Math.floor(Math.random() * validSearchData.length)]);
+    }
+    const resultHTML = results
+      .slice(0, MAX_RESULT_LENGTH)
+      .map(({ id, thumbnailUrl, title }) => generateResultHTML(id, thumbnailUrl, title))
+      .join("");
+    searchResultElement.innerHTML = resultHTML;
+  };
+
+  searchInputElement.onfocus = searchInputElement.onkeyup;
+
+  const generateResultHTML = (id, thumbnailUrl, title) =>
+    `<div class="result" onmousedown="searchScrollIntoView('${id}')">` +
+    `<img src="${thumbnailUrl}" alt="${title}">` +
+    `<span>${title}</span>` +
+    "</div>";
+
+  window.searchScrollIntoView = (id) => {
+    const targetElement = document.body.querySelector(`#requests-list .request.req-${id}`);
+    targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 })();
 
 (async () => {

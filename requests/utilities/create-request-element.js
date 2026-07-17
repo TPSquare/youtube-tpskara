@@ -9,13 +9,10 @@ const EXPIRATION = 30;
 
 const requestsListElement = document.getElementById("requests-list");
 
-export default async function createRequestElement(request, language) {
-  const requestElement = document.createElement("div");
-  requestElement.className = "request";
-  requestsListElement.appendChild(requestElement);
-
+export default async function createRequestElement(request, language, searchData) {
   const config = {
     // To find out what the configuration includes
+    id: request.youtubeID || request.id, // ID for searching
     title: request.title, // Video title
     thumbnailUrl: request.thumbnailUrl, // Link to video thumbnail
     link: request.link, // Link to the video
@@ -29,13 +26,19 @@ export default async function createRequestElement(request, language) {
     previewIDs: request.previewIDs || (request.previewID && [request.previewID]), // Previews
   };
   if (request.youtubeID) {
-    requestElement.onclick = () => console.log(request.youtubeID);
     const videoData = await getVideoData(request.youtubeID);
     config.title = videoData.title;
-    config.thumbnailUrl = videoData.thumbnailUrl;
-    if (environment !== "development") config.link = `https://youtu.be/${request.youtubeID}`;
+    config.thumbnailUrl =
+      videoData.thumbnailUrl || "https://tse4.mm.bing.net/th/id/OIP._k-Rbbqjzn5_zofRRV46YgHaEh";
+    config.link = `https://youtu.be/${request.youtubeID}`;
   }
   let isUploaded = false;
+
+  searchData.push({ title: config.title, id: config.id, thumbnailUrl: config.thumbnailUrl });
+
+  const requestElement = document.createElement("div");
+  requestElement.className = `request req-${config.id}`;
+  requestsListElement.appendChild(requestElement);
 
   const boxElement = document.createElement("div");
   boxElement.className = "box";
@@ -47,8 +50,7 @@ export default async function createRequestElement(request, language) {
   const addNoOrder = () => orderElement.classList.add("no-order");
 
   const thumbnailElement = document.createElement("img");
-  thumbnailElement.src =
-    config.thumbnailUrl || "https://tse4.mm.bing.net/th/id/OIP._k-Rbbqjzn5_zofRRV46YgHaEh";
+  thumbnailElement.src = config.thumbnailUrl;
   thumbnailElement.alt = config.title;
   boxElement.appendChild(thumbnailElement);
 

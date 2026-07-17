@@ -22,7 +22,7 @@ body {
   border-right: 2px solid #ffffff33;
   overflow-y: auto;
   background-color: #0f0f0f;
-  z-index: 10;
+  z-index: 20;
   transition-property: opacity, left;
   transition-duration: 400ms;
 }
@@ -110,6 +110,7 @@ body {
 main {
   flex: 1;
   overflow-y: auto;
+  scroll-behavior: smooth;
   padding-inline: 1.25em;
   padding-top: 2em;
   font-size: 16px;
@@ -139,7 +140,7 @@ main .margin {
 
 #requests > .title::after {
   content: " " attr(data-note);
-  font-size: 0.75em;
+  font-size: 0.725em;
   font-weight: 400;
   color: #aaaaaa;
 }
@@ -171,7 +172,7 @@ main .margin {
   padding: 0.2em 0.4em;
   border-radius: 0.25em;
   font-size: 0.9em;
-}
+} 
 
 #requests-list .request {
   position: relative;
@@ -327,12 +328,78 @@ main .margin {
   text-align: center;
 }
 
+#search-wrapper {
+  position: relative;
+}
+
+#search-input {
+  font-size: 1em;
+  background-color: #121212;
+  width: 100%;
+  border: 1px solid #303030;
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 1.25em;
+}
+
+#search-input::placeholder {
+  color: #6b6b6b;
+}
+
+#search-input:focus-within {
+  border-color: #1c62b9;
+}
+
+#search-result {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 120%;
+  background-color: #212121;
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  z-index: 10;
+}
+
+#search-input:focus-within + #search-result {
+  display: block;
+}
+
+#search-result .result {
+  display: flex;
+  align-items: center;
+  height: 2.5em;
+  padding-inline: 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+#search-result .result:hover {
+  background-color: #323232;
+}
+
+#search-result .result img {
+  height: 75%;
+  border-radius: 0.25em;
+  margin-right: 0.4em;
+}
+
+#search-result .result span {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 #overlay {
   position: fixed;
   inset: 0;
   background-color: #000000aa;
   opacity: 0;
   pointer-events: none;
+  z-index: 19;
   transition: opacity 250ms;
 }
 
