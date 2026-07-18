@@ -114,7 +114,7 @@ import createRequestElement from "./utilities/create-request-element.js";
       const mainHeight = mainElement.clientHeight;
       const targetHeight = targetElement.offsetHeight;
       const targetOffsetTop = targetElement.offsetTop;
-      const scrollTo = targetOffsetTop - mainHeight / 2 + targetHeight / 2;
+      const scrollTo = targetOffsetTop - targetHeight;
 
       mainElement.scrollTo({ top: scrollTo, behavior: "smooth" });
     }, 500);
