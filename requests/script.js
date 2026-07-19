@@ -74,17 +74,23 @@ import createRequestElement from "./utilities/create-request-element.js";
   const MAX_RESULT_LENGTH = 5;
   searchInputElement.onkeyup = () => {
     const value = searchInputElement.value.trim().toLowerCase();
-    const results = value
-      ? searchData.filter(({ title }) => title.toLowerCase().includes(value))
-      : [];
-    const missLength = MAX_RESULT_LENGTH - results.length;
-    for (let i = 0; i < missLength; i++) {
-      const filter = ({ id }) => !results.some(({ id: resID }) => id === resID);
-      const validSearchData = searchData.filter(filter);
-      results.push(validSearchData[Math.floor(Math.random() * validSearchData.length)]);
-    }
+
+    const results = (() => {
+      if (!value) {
+        if (searchData.length <= MAX_RESULT_LENGTH) return searchData;
+        const searchDataCopy = [...searchData];
+        const result = [];
+        for (let i = 0; i < MAX_RESULT_LENGTH; i++) {
+          const start = Math.floor(Math.random() * searchDataCopy.length);
+          result.push(searchDataCopy.splice(start, 1)[0]);
+        }
+        return result;
+      }
+      return searchData.filter(({ title }) => title.toLowerCase().includes(value));
+    })();
+
     const resultHTML = results
-      .slice(0, MAX_RESULT_LENGTH)
+      .slice(0, Math.min(MAX_RESULT_LENGTH, results.length))
       .map(({ id, thumbnailUrl, title }) => generateResultHTML(id, thumbnailUrl, title))
       .join("");
     searchResultElement.innerHTML = resultHTML;
