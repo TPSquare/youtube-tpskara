@@ -127,7 +127,7 @@ main .margin {
 #requests .divider {
   height: 2px;
   background-color: #ffffff33;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.875em;
   margin-top: 0.625em;
 }
 
@@ -176,9 +176,7 @@ main .margin {
 
 #requests-list .request {
   position: relative;
-  padding-left: 0.5em;
-  padding-bottom: 0.625em;
-  margin-top: 0.625em;
+  padding: 0.625em 0.5em;
 }
 
 #requests-list .request:not(:last-child) {
@@ -252,7 +250,7 @@ main .margin {
 #requests-list .float {
   position: absolute;
   display: flex;
-  top: 0;
+  top: 0.625em;
   right: 0;
   font-size: 0.9em;
   font-weight: 500;

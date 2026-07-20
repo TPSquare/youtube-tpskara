@@ -113,17 +113,14 @@ import createRequestElement from "./utilities/create-request-element.js";
 
   window.searchScrollIntoView = (id) => {
     if (document.activeElement) document.activeElement.blur();
-    setTimeout(() => {
-      const mainElement = document.body.querySelector("main");
-      const targetElement = mainElement.querySelector(`.request.request-${id}`);
 
-      const mainHeight = mainElement.clientHeight;
-      const targetHeight = targetElement.offsetHeight;
-      const targetOffsetTop = targetElement.offsetTop;
-      const scrollTo = targetOffsetTop - targetHeight;
+    const mainElement = document.body.querySelector("main");
+    const targetElement = mainElement.querySelector(`.request.request-${id}`);
 
-      mainElement.scrollTo({ top: scrollTo, behavior: "smooth" });
-    }, 500);
+    const targetHeight = targetElement.offsetHeight;
+    const targetOffsetTop = targetElement.offsetTop;
+    const scrollTo = targetOffsetTop - targetHeight;
+    setTimeout(() => mainElement.scrollTo({ top: scrollTo, behavior: "smooth" }), 500);
   };
 })();
 

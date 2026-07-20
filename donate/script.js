@@ -9,8 +9,8 @@ document.getElementById("notices").innerHTML = config.lock
   : languages.notices.map((e) => `<div>${e}</div>`).join("");
 
 const currentNoticesVersion = Number(localStorage.getItem("notices-version"));
-if (currentNoticesVersion !== config.noticesVersion || config.lock)
-  document.body.classList.add("show-notices");
+if (currentNoticesVersion === config.noticesVersion && !config.lock)
+  document.body.classList.remove("show-notices");
 
 const okBtn = document.getElementById("ok-btn");
 if (config.lock) okBtn.parentElement.removeChild(okBtn);
