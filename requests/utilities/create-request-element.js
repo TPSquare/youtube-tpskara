@@ -38,6 +38,7 @@ export default async function createRequestElement(request, language, searchData
 
   const requestElement = document.createElement("div");
   requestElement.className = `request request-${config.id}`;
+  requestElement.onclick = () => console.log(config.id);
   requestsListElement.appendChild(requestElement);
 
   const boxElement = document.createElement("div");
