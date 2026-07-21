@@ -10,6 +10,9 @@ const EXPIRATION = 30;
 const requestsListElement = document.getElementById("requests-list");
 
 export default async function createRequestElement(request, language, searchData) {
+  const requestElement = document.createElement("div");
+  requestsListElement.appendChild(requestElement);
+
   const config = {
     // To find out what the configuration includes
     id: request.youtubeID || request.id, // ID for searching
@@ -36,10 +39,8 @@ export default async function createRequestElement(request, language, searchData
 
   searchData.push({ title: config.title, id: config.id, thumbnailUrl: config.thumbnailUrl });
 
-  const requestElement = document.createElement("div");
   requestElement.className = `request request-${config.id}`;
   requestElement.onclick = () => console.log(config.id);
-  requestsListElement.appendChild(requestElement);
 
   const boxElement = document.createElement("div");
   boxElement.className = "box";

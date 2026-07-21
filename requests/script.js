@@ -44,7 +44,8 @@ import createRequestElement from "./utilities/create-request-element.js";
 
   if (requests.length) requestsListElement.removeChild(requestsListElement.querySelector(".empty"));
 
-  for (const request of requests) await createRequestElement(request, language, searchData);
+  const requestPromises = requests.map((req) => createRequestElement(req, language, searchData));
+  await Promise.all(requestPromises);
   requestsListElement
     .querySelectorAll(".order:not(.no-order)")
     .forEach((order, index) => (order.textContent = index + 1));
