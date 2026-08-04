@@ -1,0 +1,17 @@
+* {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#name-search {
+  padding: 0.25em 0.5em;
+}
+
+#result-label {
+  margin-top: 0.5em;
+}
+
+#result {
+  margin-top: 0.25em;
+  padding-left: 1em;
+}
