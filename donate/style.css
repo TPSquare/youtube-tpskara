@@ -38,7 +38,6 @@ main {
 
 #notices {
   text-align: justify;
-  margin-bottom: 0.5em;
 }
 
 #notices > div::before {
@@ -49,6 +48,7 @@ main {
 #bottom-bar {
   display: flex;
   justify-content: end;
+  margin-top: 0.5em;
 }
 
 #ok-btn {

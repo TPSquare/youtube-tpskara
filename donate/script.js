@@ -12,10 +12,12 @@ const currentNoticesVersion = Number(localStorage.getItem("notices-version"));
 if (currentNoticesVersion === config.noticesVersion && !config.lock)
   document.body.classList.remove("show-notices");
 
-const okBtn = document.getElementById("ok-btn");
-if (config.lock) okBtn.parentElement.removeChild(okBtn);
-else
-  okBtn.onclick = () => {
+if (config.lock) {
+  const main = document.body.querySelector("main");
+  main.removeChild(document.getElementById("title"));
+  main.removeChild(document.getElementById("bottom-bar"));
+} else
+  document.getElementById("ok-btn").onclick = () => {
     document.body.classList.remove("show-notices");
     localStorage.setItem("notices-version", config.noticesVersion);
   };

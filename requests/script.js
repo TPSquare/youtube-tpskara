@@ -129,7 +129,7 @@ import dateStringToObject from "./utilities/date-string-to-object.js";
 (async () => {
   const copyrightStrike = await fetch("./copyright-strike.json").then((res) => res.json());
   if (!copyrightStrike) return;
-  
+
   const nowDate = Date.now();
   if (dateStringToObject(copyrightStrike) < nowDate) return;
 
@@ -161,4 +161,6 @@ import dateStringToObject from "./utilities/date-string-to-object.js";
 
 (() => {
   document.body.querySelector("#topbar .change-language").onclick = gotoChooseLanguages;
+  document.body.querySelector("#topbar .donate").onclick = () =>
+    (window.location.href = "../donate");
 })();

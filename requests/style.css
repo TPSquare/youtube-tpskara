@@ -433,13 +433,19 @@ main .margin {
   font-weight: 500;
   border: none;
   border-radius: 0.5em;
-  padding: 0.5em 0.75em;
+  padding: 0.3em 0.75em;
+  margin-right: 0.2em;
   cursor: pointer;
 }
 
 #topbar .change-language {
   color: #f1f1f1;
   background-color: #323232;
+  margin-right: 0;
+}
+
+#topbar .donate {
+  background-color: #00acac;
 }
 
 @media (max-width: 992px) {
