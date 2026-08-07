@@ -1,7 +1,7 @@
 [
   { "youtubeID": "OBY2rL8h7C4", "priority": "50.000đ", "note": "Nguyễn Hoàng Minh", "uploadDate": "06:00 8 tháng 8, 2026", "previewID": "moment-lil-wuyn" },
   { "youtubeID": "y2bSu-vLd9Q", "priority": "16.683đ", "note": "LE DUC NHAT TRUNG", "request": "Bè nhỏ giọng nữ", "waitingUpload": true, "previewIDs": ["am-tinh-0-ronboogz-lumee-be-giong-nu", "am-tinh-0-ronboogz-lumee-song-ca"] },
-  { "youtubeID": "V_z_k8nHFAI", "priority": "15.000đ", "note": "Lâm Thành An" },
+  { "youtubeID": "V_z_k8nHFAI", "priority": "15.000đ", "note": "Lâm Thành An", "waitingUpload": true },
   { "youtubeID": "4_VbjN0kAfw", "waitingUpload": true, "previewID": "mama-boy-amee" },
   { "youtubeID": "LAfAl4akeCk", "waitingUpload": true, "previewID": "mang-xa-hoi-siro-phong-can-mrvit" },
   { "youtubeID": "1qPDgh6ntkE", "waitingUpload": true, "previewID": "nho-em-rocky-cde-khan" },
