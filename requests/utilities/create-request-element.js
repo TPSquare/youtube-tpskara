@@ -30,6 +30,7 @@ export default async function createRequestElement(request, language, searchData
   };
   if (request.youtubeID) {
     const videoData = await getVideoData(request.youtubeID);
+    console.log(request.youtubeID);
     config.title = videoData.title;
     config.thumbnailUrl =
       videoData.thumbnailUrl || "https://tse4.mm.bing.net/th/id/OIP._k-Rbbqjzn5_zofRRV46YgHaEh";
