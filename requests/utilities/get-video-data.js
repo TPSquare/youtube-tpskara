@@ -6,6 +6,7 @@ export default async function getVideoData(id) {
 
   const api = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${id}&key=AIzaSyDJvCeWiQP8gLQCiZGoQAOQvE9F-e1LIy8`;
   const videoData = await fetch(api).then((res) => res.json());
+  console.log(videoData);
   return {
     title: videoData.items[0].snippet.title,
     thumbnailUrl: videoData.items[0].snippet.thumbnails.medium.url,
