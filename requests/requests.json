@@ -1,6 +1,5 @@
 [
-  { "youtubeID": "m9iqKZJD1qI", "uploadDate": "06:00 4 tháng 9, 2026", "previewID": "em-noi-voi-ai-kayc-wxrdie-trung-tran" },
-  { "youtubeID": "fRAr0pj0gGE", "waitingUpload": true, "previewID": "yeu-5-rhymastic" },
+  { "youtubeID": "fRAr0pj0gGE", "uploadDate": "06:00 5 tháng 9, 2026", "previewID": "yeu-5-rhymastic" },
   { "youtubeID": "3GGaIWjefcA", "waitingUpload": true, "previewID": "y6u-rhymastic" },
   { "youtubeID": "3zyoPRYf4i0", "waitingUpload": true, "previewID": "side-effects-rhymastic" },
   { "youtubeID": "D164TFHeOcI", "waitingUpload": true, "previewID": "nen-va-hoa-rhymastic" },
@@ -33,6 +32,6 @@
   { "youtubeID": "sF1LKXI5etU", "recordDate": "20:58 31/08/2026", "note": "@triet7542" },
   { "youtubeID": "RlBkvjVss-s", "recordDate": "19:26 02/09/2026", "note": "@CongHoa205" },
   { "youtubeID": "Y1QXFXGfrTI", "recordDate": "19:27 02/09/2026", "note": "@VinhNguyễn-v2p" },
-  { "youtubeID": "LY7-VjzCUVo", "recordDate": "19:14 03/09/2026", "note": "@gauakwy" },
+  { "youtubeID": "LY7-VjzCUVo", "recordDate": "19:14 03/09/2026", "request": "Có hook", "note": "@gauakwy" },
   { "youtubeID": "l6C5b1KccJc", "recordDate": "19:17 03/09/2026", "note": "@vohoangdu3968" }
 ]
