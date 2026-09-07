@@ -1,12 +1,11 @@
 [
-  { "youtubeID": "3zyoPRYf4i0", "uploadDate": "06:00 7 tháng 9, 2026", "previewID": "side-effects-rhymastic" },
-  { "youtubeID": "D164TFHeOcI", "waitingUpload": true, "previewID": "nen-va-hoa-rhymastic" },
+  { "youtubeID": "D164TFHeOcI", "uploadDate": "06:00 8 tháng 9, 2026", "previewID": "nen-va-hoa-rhymastic" },
   { "youtubeID": "rDpJfmBI9xQ", "waitingUpload": true, "previewIDs": ["abcdxyznmasad-wn-song-ca", "abcdxyznmasad-wn-co-giong-nam", "abcdxyznmasad-wn-co-giong-nu"] },
   { "youtubeID": "O5iDDoD4ZGw", "waitingUpload": true, "previewID": "dang-ra-anh-khong-nen-bray-datg" },
   { "youtubeID": "pgqsRyJn5Ow", "waitingUpload": true, "previewID": "con-muon-vintrap" },
   { "youtubeID": "smiBnUAPQa0", "waitingUpload": true, "previewID": "paranoid-tao-remake" },
+  { "youtubeID": "U8VQmgHMngk", "waitingUpload": true, "previewID": "sau-con-suy-rhyder" },
   { "youtubeID": "5PvzGDU8WjM", "waitingUpload": true, "previewID": "khong-the-say-song24-hieuthuhai" },
-  { "youtubeID": "U8VQmgHMngk", "recordDate": "12:11 10/08/2026", "note": "@FeeeGia" },
   { "youtubeID": "1WWbWIeCAwE", "recordDate": "12:11 10/08/2026", "note": "@FeeeGia" },
   { "youtubeID": "yHUXtk_d45s", "recordDate": "12:12 10/08/2026", "note": "@FeeeGia" },
   { "youtubeID": "JIrPrfaYz0Y", "recordDate": "12:13 10/08/2026", "note": "@FeeeGia" },
@@ -33,5 +32,6 @@
   { "youtubeID": "LY7-VjzCUVo", "recordDate": "19:14 03/09/2026", "request": "Có hook", "note": "@gauakwy" },
   { "youtubeID": "l6C5b1KccJc", "recordDate": "19:17 03/09/2026", "note": "@vohoangdu3968" },
   { "youtubeID": "KDThNBO0vgw", "recordDate": "17:42 05/09/2026", "note": "@NZz16" },
-  { "youtubeID": "uIte77UsVtk", "recordDate": "19:59 06/09/2026", "note": "@TuanAnh-rd8fb" }
+  { "youtubeID": "uIte77UsVtk", "recordDate": "19:59 06/09/2026", "note": "@TuanAnh-rd8fb" },
+  { "youtubeID": "icGhFH_5R8U", "recordDate": "17:22 07/09/2026", "note": "@nhutlinhtangnangdoahoa" }
 ]
