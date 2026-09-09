@@ -1,5 +1,5 @@
 [
-  { "youtubeID": "uIte77UsVtk", "priority": "12.000đ", "note": "Nguyễn Hoàng Anh Tuấn" },
+  { "youtubeID": "uIte77UsVtk", "priority": "12.000đ", "note": "Nguyễn Hoàng Anh Tuấn", "uploadDate": "06:00 10 tháng 9, 2026" },
   { "youtubeID": "rDpJfmBI9xQ", "waitingUpload": true, "previewIDs": ["abcdxyznmasad-wn-song-ca", "abcdxyznmasad-wn-co-giong-nam", "abcdxyznmasad-wn-co-giong-nu"] },
   { "youtubeID": "O5iDDoD4ZGw", "waitingUpload": true, "previewID": "dang-ra-anh-khong-nen-bray-datg" },
   { "youtubeID": "pgqsRyJn5Ow", "waitingUpload": true, "previewID": "con-muon-vintrap" },
@@ -25,5 +25,6 @@
   { "youtubeID": "l6C5b1KccJc", "recordDate": "19:17 03/09/2026", "note": "@vohoangdu3968" },
   { "youtubeID": "KDThNBO0vgw", "recordDate": "17:42 05/09/2026", "note": "@NZz16" },
   { "youtubeID": "icGhFH_5R8U", "recordDate": "17:22 07/09/2026", "note": "@nhutlinhtangnangdoahoa" },
-  { "youtubeID": "C4DMqdJu7h0", "recordDate": "21:53 08/09/2026", "note": "@CongHoa205" }
+  { "youtubeID": "C4DMqdJu7h0", "recordDate": "21:53 08/09/2026", "note": "@CongHoa205" },
+  { "youtubeID": "rPxjiwy5DFk", "recordDate": "00:32 10/09/2026", "note": "@nguyentien9591" }
 ]
