@@ -1,5 +1,8 @@
 {
   "noticesTitle": "Lưu ý khi donate",
   "lock": "Tính năng donate trên kênh TPSKara hiện đang tạm thời bị khóa",
-  "notices": ["Vui lòng luôn truy cập trang này trước khi donate để cập nhật các thông báo mới nhất."]
+  "notices": [
+    "Việc xác minh và ghi nhận yêu cầu được thực hiện thủ công. Nếu sau 24 giờ yêu cầu của bạn chưa được ghi nhận, vui lòng quay lại trang này để xem các thông báo mới (nếu có) và bình luận dưới video mới nhất của kênh để chúng mình xử lý nhé!",
+    "Vui lòng luôn truy cập trang này trước khi donate để cập nhật các thông báo mới nhất."
+  ]
 }

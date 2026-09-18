@@ -2,6 +2,7 @@
   "noticesTitle": "Donation notes",
   "lock": "The donation feature on the TPSKara channel is temporarily unavailable",
   "notices": [
+    "Verification and request processing are done manually. If your request has not been recorded within 24 hours, please return to this page to check for any new announcements (if applicable) and leave a comment under the channel’s latest video so we can process your request!",
     "Please visit this page before making a donation to stay up to date with the latest announcements."
   ]
 }
