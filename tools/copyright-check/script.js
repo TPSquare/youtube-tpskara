@@ -6,7 +6,8 @@ const resultElement = document.getElementById("result");
 
 searchByNameInput.onkeyup = function ({ target }) {
   const value = target.value.trim().toLowerCase();
-  if (value === "") return (resultElement.innerHTML = "");
+  if (value === "") return (resultElement.innerHTML = copyrightStrikes.join("<br>"));
   const coincidences = copyrightStrikes.filter((e) => e.includes(value));
   resultElement.innerHTML = coincidences.join("<br>");
 };
+searchByNameInput.onkeyup({ target: { value: "" } });
