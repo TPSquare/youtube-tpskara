@@ -1,10 +1,19 @@
 import gotoChooseLanguages from "./goto-choose-languages.js";
-export default async function getLanguages() {
+
+const getAPI = () => {
   const lang = localStorage.getItem("lang");
   if (!lang) gotoChooseLanguages();
   document.documentElement.setAttribute("lang", lang);
-
   const dataKey = window.location.pathname.replace("/youtube-tpskara", "").slice(1, -1);
-  const languageApi = `../internal/languages-data/${lang}/${dataKey}.json`;
-  return await fetch(languageApi).then((res) => res.json());
+  return `../internal/languages-data/${lang}/${dataKey}.json`;
+};
+
+export default async function getLanguages() {
+  const API = getAPI();
+  return await fetch(API).then((res) => res.json());
+}
+
+export async function getLastModifiedLanguages() {
+  const API = getAPI();
+  return (await fetch(API)).headers.get("Last-Modified");
 }
