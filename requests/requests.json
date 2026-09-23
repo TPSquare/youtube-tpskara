@@ -1,10 +1,9 @@
 [
   { "youtubeID": "5PvzGDU8WjM", "cancel": "Vi phạm bản quyền" },
-  { "youtubeID": "A9H8YzAwJTc", "priority": "30.000đ", "note": "Lê Hoàng Thắng", "request": "Có hook & không hook", "uploadDate": "06:00 22 tháng 9, 2026" },
-  { "youtubeID": "PF3exV7ck7s", "recordDate": "21:58 12/09/2026", "note": "@ryn2503" },
+  { "youtubeID": "PF3exV7ck7s", "uploadDate": "06:00 24/09/2026", "note": "@ryn2503" },
   { "youtubeID": "i0nd3NPJ4MI", "recordDate": "22:44 11/09/2026", "note": "@NhànPhạm-z6k3j @29trimanh47 @nhantv3731" },
-  { "youtubeID": "gsVy_ZzgyNs", "recordDate": "12:47 24/08/2026", "note": "@SiDiiN" },
-  { "youtubeID": "bdOXfLGvlK4", "recordDate": "12:47 24/08/2026", "note": "@SiDiiN" },
+  { "youtubeID": "gsVy_ZzgyNs", "recordDate": "01:27 24/09/2026", "note": "@SiDiiN" },
+  { "youtubeID": "bdOXfLGvlK4", "recordDate": "01:27 24/09/2026", "note": "@SiDiiN" },
   { "youtubeID": "vjdtUnuzHqc", "recordDate": "11:47 27/08/2026", "note": "@YoungB-kd" },
   { "youtubeID": "XinqGLPa7Sc", "recordDate": "11:48 27/08/2026", "note": "@YoungB-kd" },
   { "youtubeID": "D3XsumGJRyo", "recordDate": "11:49 27/08/2026", "note": "@YoungB-kd" },
@@ -30,5 +29,8 @@
   { "youtubeID": "DeGb6DAsdnY", "recordDate": "20:27 18/09/2026", "note": "@tbhl-b2h" },
   { "youtubeID": "q23RCXNfZUM", "recordDate": "23:49 19/09/2026", "note": "@HungLe-f6l" },
   { "youtubeID": "R47YwUQvgBI", "recordDate": "23:50 19/09/2026", "note": "@HungLe-f6l" },
-  { "youtubeID": "CobNJq457-s", "recordDate": "00:38 22/09/2026", "note": "@yonnah999" }
+  { "youtubeID": "CobNJq457-s", "recordDate": "00:38 22/09/2026", "note": "@yonnah999" },
+  { "youtubeID": "N4ziA8NIQEs", "recordDate": "01:24 24/09/2026", "note": "@Chien22gaming" },
+  { "youtubeID": "cCP_Vcl4I74", "recordDate": "01:24 24/09/2026", "note": "@SiêngggVăn" },
+  { "youtubeID": "fRb8Ch6cN_w", "recordDate": "01:25 24/09/2026", "note": "@ĐứcMinh-n6h" }
 ]
