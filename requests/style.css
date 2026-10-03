@@ -274,7 +274,8 @@ main .margin {
   color: #2eb144;
 }
 
-#requests-list .float .done {
+#requests-list .float .done,
+#requests-list .float .refund {
   background-color: #38ae47;
   color: #f1f1f1;
 }
@@ -289,12 +290,11 @@ main .margin {
   color: white;
 }
 
-#requests-list .float .done.uploaded-link:hover {
+#requests-list .float .redirect:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-
-#requests-list .float .done.uploaded-link::after {
+#requests-list .float .redirect::after {
   content: "↗";
   padding-left: 0.25em;
   transform: translateY(-0.1em);

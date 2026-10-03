@@ -21,7 +21,8 @@
       "minutes": "minutes",
       "seconds": "seconds"
     },
-    "preview": "Preview"
+    "preview": "Preview",
+    "refund": "How to receive a refund"
   },
   "copyrightStrike": "Copyright strike",
   "copyrightNotice": "The channel cannot upload videos until the end of {Xdate}",

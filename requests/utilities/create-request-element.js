@@ -26,7 +26,8 @@ export default async function createRequestElement(request, language, searchData
     uploadDate: standardizeYoutubeDate(request.uploadDate), // The time the karaoke video was uploaded   [hh:mm dd/mm/yyyy]
     uploadedID: request.uploadedID, // ID of the uploaded karaoke video
     cancel: request.cancel, // Reason for canceling the request
-    previewIDs: request.previewIDs || (request.previewID && [request.previewID]), // Previews
+    previewIDs: request.previewIDs || (request.previewID && [request.previewID]), // Previews,
+    refund: request.refund, // Does the request require a refund? [bool]
   };
   if (request.youtubeID) {
     const videoData = await getVideoData(request.youtubeID);
@@ -134,7 +135,7 @@ export default async function createRequestElement(request, language, searchData
       doneElement.textContent = language.requestElement.uploaded;
       doneElement.removeAttribute("title");
       if (config.uploadedID) {
-        doneElement.classList.add("uploaded-link");
+        doneElement.classList.add("redirect");
         doneElement.onclick = () =>
           (window.location.href = `https://youtu.be/${config.uploadedID}`);
       }
@@ -149,6 +150,14 @@ export default async function createRequestElement(request, language, searchData
   }
 
   if (config.cancel) addCancel(config.cancel);
+
+  if (config.refund) {
+    const refundElement = document.createElement("div");
+    refundElement.className = "refund redirect";
+    refundElement.textContent = language.requestElement.refund;
+    refundElement.onclick = () => (window.location.href = "https://forms.gle/JPZEcNhy6yT3a6RV8");
+    floatElement.appendChild(refundElement);
+  }
 
   if (config.previewIDs && !isUploaded) {
     const previewsElement = document.createElement("div");
