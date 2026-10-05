@@ -1,5 +1,5 @@
 [
-  { "youtubeID": "jFSep_j4dGE", "priority": "15.000đ", "note": "Các bạn không rõ tên" },
+  { "youtubeID": "jFSep_j4dGE", "priority": "15.000đ", "note": "Các bạn không rõ tên", "uploadDate": "06:00 6 tháng 10, 2026" },
   { "youtubeID": "DeGb6DAsdnY", "priority": "15.000đ", "note": "Các bạn không rõ tên" },
   { "youtubeID": "BiejIx2wxRg", "priority": "12.000đ", "note": "LE CONG HOA" },
   { "youtubeID": "i0nd3NPJ4MI", "recordDate": "22:44 11/09/2026", "note": "@NhànPhạm-z6k3j @29trimanh47 @nhantv3731" },
@@ -14,7 +14,6 @@
   { "youtubeID": "RlBkvjVss-s", "recordDate": "00:26 03/10/2026", "note": "@CongHoa205" },
   { "youtubeID": "Y1QXFXGfrTI", "recordDate": "00:26 03/10/2026", "note": "@VinhNguyễn-v2p" },
   { "youtubeID": "LY7-VjzCUVo", "recordDate": "23:50 03/10/2026", "request": "Có hook", "note": "@gauakwy" },
-  { "youtubeID": "KDThNBO0vgw", "recordDate": "17:42 05/09/2026", "note": "@NZz16" },
   { "youtubeID": "icGhFH_5R8U", "recordDate": "17:22 07/09/2026", "note": "@nhutlinhtangnangdoahoa" },
   { "youtubeID": "C4DMqdJu7h0", "recordDate": "21:53 08/09/2026", "note": "@CongHoa205" },
   { "youtubeID": "rPxjiwy5DFk", "recordDate": "00:32 10/09/2026", "note": "@nguyentien9591" },
@@ -35,5 +34,8 @@
   { "youtubeID": "KyQa5NGfPFE", "recordDate": "00:27 03/10/2026", "note": "@HungLe-f6l" },
   { "youtubeID": "DaqJXfXv42I", "recordDate": "00:28 03/10/2026", "note": "@LuongHungBach" },
   { "youtubeID": "VPQxNcuYz-0", "recordDate": "23:48 04/10/2026", "note": "@vananhlam4798" },
-  { "youtubeID": "pEMBblu8Lvk", "recordDate": "23:50 04/10/2026", "note": "@trung14" }
+  { "youtubeID": "pEMBblu8Lvk", "recordDate": "23:50 04/10/2026", "note": "@trung14" },
+  { "youtubeID": "zylC5TE9jrk", "recordDate": "01:21 06/10/2026", "note": "@nctl295" },
+  { "youtubeID": "qeXGcXqfnyw", "recordDate": "01:22 06/10/2026", "note": "@uuuuu.uu3" },
+  { "youtubeID": "IlUiB6325Ac", "recordDate": "01:22 06/10/2026", "note": "@volongphung" }
 ]
