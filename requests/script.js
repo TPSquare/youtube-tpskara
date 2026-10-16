@@ -125,7 +125,7 @@ import createRequestElement from "./utilities/create-request-element.js";
   };
 })();
 
-import dateStringToObject from "./utilities/date-string-to-object.js";
+import dateStringToObject from "../internal/utilities/date-string-to-object.js";
 (async () => {
   const copyrightStrike = await fetch("./copyright-strike.json").then((res) => res.json());
   if (!copyrightStrike) return;

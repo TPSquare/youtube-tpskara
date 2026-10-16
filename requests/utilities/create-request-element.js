@@ -1,7 +1,6 @@
 import getVideoData from "./get-video-data.js";
 import calculateTheRemainingTime from "./calculate-the-remaining-time.js";
-import environment from "../../internal/configs/environment.js";
-import dateStringToObject from "./date-string-to-object.js";
+import dateStringToObject from "../../internal/utilities/date-string-to-object.js";
 import standardizeYoutubeDate from "./standardize-youtube-date.js";
 import getTitleFromVideoPage from "./get-title-from-video-page.js";
 

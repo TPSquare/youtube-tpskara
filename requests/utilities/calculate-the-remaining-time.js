@@ -1,4 +1,4 @@
-import dateStringToObject from "./date-string-to-object.js";
+import dateStringToObject from "../../internal/utilities/date-string-to-object.js";
 
 export default function calculateTheRemainingTime(dateString = "hh:mm dd/mm/yyyy", daysToAdd) {
   const startDate = dateStringToObject(dateString);
