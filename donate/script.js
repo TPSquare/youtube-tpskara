@@ -13,7 +13,14 @@ const languages = await getLanguages();
 document.getElementById("title").textContent = languages.noticesTitle + ":";
 document.getElementById("notices").innerHTML = config.lockDate
   ? `<div>${languages.lock.replace("{X}", config.lockDate)}</div>`
-  : languages.notices.map((e) => `<div>${e}</div>`).join("");
+  : languages.notices.map((e) => `<div>${formatNotice(e)}</div>`).join("");
+function formatNotice(notice) {
+  while (notice.includes("*")) {
+    notice = notice.replace("*", "<strong>");
+    notice = notice.replace("*", "</strong>");
+  }
+  return notice;
+}
 
 const currentNoticesVersion = localStorage.getItem("notices-version");
 const languagesVersion = await getLastModifiedLanguages();

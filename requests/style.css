@@ -132,6 +132,8 @@ main .margin {
 }
 
 #requests > .title {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   font-size: 1.25em;
   color: #f1f1f1;
@@ -143,6 +145,7 @@ main .margin {
   font-size: 0.725em;
   font-weight: 400;
   color: #aaaaaa;
+  margin-left: 0.5em;
 }
 
 #requests .informations {

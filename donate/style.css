@@ -34,7 +34,6 @@ main {
   font-size: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 0.2em;
 }
 
 #notices {
@@ -42,6 +41,9 @@ main {
 }
 
 #notices > div {
+  margin-top: 0.4em;
+}
+#notices > div:last-child {
   margin-bottom: 0.25em;
 }
 
