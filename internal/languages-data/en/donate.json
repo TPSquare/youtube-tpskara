@@ -2,7 +2,7 @@
   "noticesTitle": "Donation notes",
   "lock": "The donation feature on the TPSKara channel is temporarily unavailable until the end of {X}.",
   "notices": [
-    "From November 14, 2026: Donations of *30,000 VND* or more (bank, MoMo) and *$2 USD* or more (PayPal) will be prioritized to the top of the queue. Donations below these amounts will be placed in alternating slots starting from position 3 (positions 3, 5, 7, ...).",
+    "From November 14, 2026: Donations of *20,000 VND* or more (bank, MoMo) and *$2 USD* or more (PayPal) will be prioritized to the top of the queue. Donations below these amounts will be placed in alternating slots starting from position 3 (positions 3, 5, 7, ...).",
     "Please always check this page before donating to see the latest updates."
   ]
 }
