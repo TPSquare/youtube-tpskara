@@ -253,6 +253,8 @@ main .margin {
 #requests-list .float {
   position: absolute;
   display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
   top: 0.625em;
   right: 0;
   font-size: 0.9em;
@@ -265,6 +267,8 @@ main .margin {
   border-radius: 0.25em;
   box-shadow: 0 0.5em 1em 0.1em black;
   margin-left: 0.5em;
+  margin-bottom: 0.5em;
+  text-wrap: nowrap;
 }
 
 #requests-list .float .priority {
