@@ -1,7 +1,7 @@
 [
   { "youtubeID": "EH-CtehXo2s", "priority": "10.000đ", "note": "LE QUOC ANH", "uploadDate": "06:00 14 tháng 11, 2026" },
   { "youtubeID": "3WrfjFwYSlY", "uploadDate": "06:00 15 tháng 11, 2026", "request": "Có giọng hỗ trợ" },
-  { "youtubeID": "A5f0LBEmhVk", "priority": "25.000đ", "refund": true },
+  { "youtubeID": "A5f0LBEmhVk", "priority": "25.000đ", "refund": true, "cancel": "Vi phạm bản quyền" },
   { "youtubeID": "_1g1MwoRjug", "priority": "25.000đ", "note": "LE CAO KHAI / Bank", "request": "Có bè" },
   { "youtubeID": "B9otsRRe0BE", "priority": "25.000đ", "note": "LE CAO KHAI / Bank", "request": "Có bè" },
   { "youtubeID": "onM02bB0mYw", "priority": "25.000đ", "note": "LE CAO KHAI / Bank", "request": "Có bè" },

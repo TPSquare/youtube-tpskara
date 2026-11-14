@@ -83,7 +83,10 @@ export default async function createRequestElement(request, language, searchData
 
   const addCancel = (text) => {
     titleElement.classList.add("cancel");
-    floatElement.childNodes.forEach((child) => floatElement.removeChild(child));
+    floatElement.childNodes.forEach((child) => {
+      if (child.className === "priority") return;
+      floatElement.removeChild(child);
+    });
     addNoOrder();
 
     const expiredElement = document.createElement("div");
