@@ -1,7 +1,11 @@
 [
   { "youtubeID": "EH-CtehXo2s", "priority": "10.000đ", "note": "LE QUOC ANH", "uploadDate": "06:00 14 tháng 11, 2026" },
-  { "youtubeID": "3WrfjFwYSlY", "uploadDate": "06:00 15 tháng 11, 2026" },
-  { "youtubeID": "A5f0LBEmhVk", "priority": "25.000đ" },
+  { "youtubeID": "3WrfjFwYSlY", "uploadDate": "06:00 15 tháng 11, 2026", "request": "Có giọng hỗ trợ" },
+  { "youtubeID": "A5f0LBEmhVk", "priority": "25.000đ", "refund": true },
+  { "youtubeID": "_1g1MwoRjug", "priority": "25.000đ", "note": "LE CAO KHAI / Bank", "request": "Có bè" },
+  { "youtubeID": "B9otsRRe0BE", "priority": "25.000đ", "note": "LE CAO KHAI / Bank", "request": "Có bè" },
+  { "youtubeID": "onM02bB0mYw", "priority": "25.000đ", "note": "LE CAO KHAI / Bank", "request": "Có bè" },
+  { "youtubeID": "uWPy5-4jBSE", "priority": "25.000đ", "note": "LE CAO KHAI / Bank", "request": "Có bè" },
   { "youtubeID": "GjsX0aJ9ESs", "priority": "10.000đ", "request": "Có giọng Sidie" },
   { "youtubeID": "7ypJm3lUupc", "priority": "2.000đ" },
   { "youtubeID": "xUZSXVJX1eY", "recordDate": "18:15 16/10/2026", "note": "@lamngosi7615" },

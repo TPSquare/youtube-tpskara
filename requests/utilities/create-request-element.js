@@ -1,4 +1,4 @@
-import getVideoData from "./get-video-data.js";
+import getVideoData from "../../internal/utilities/get-yt-video-data.js";
 import calculateTheRemainingTime from "./calculate-the-remaining-time.js";
 import dateStringToObject from "../../internal/utilities/date-string-to-object.js";
 import standardizeYoutubeDate from "./standardize-youtube-date.js";

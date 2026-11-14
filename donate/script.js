@@ -11,6 +11,7 @@ if (config.lockDate) {
 import getLanguages, { getLastModifiedLanguages } from "../internal/utilities/get-languages.js";
 const languages = await getLanguages();
 document.getElementById("title").textContent = languages.noticesTitle + ":";
+document.body.querySelector("#nav .request-list").textContent = languages.listOfRequests;
 document.getElementById("notices").innerHTML = config.lockDate
   ? `<div>${languages.lock.replace("{X}", config.lockDate)}</div>`
   : languages.notices.map((e) => `<div>${formatNotice(e)}</div>`).join("");
@@ -37,6 +38,6 @@ if (config.lockDate) {
     localStorage.setItem("notices-version", languagesVersion);
   };
 
-document.getElementById("notices-btn").onclick = () => {
+document.body.querySelector("#nav .notices-btn").onclick = () => {
   document.body.classList.add("show-notices");
 };

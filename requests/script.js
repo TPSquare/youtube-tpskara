@@ -15,6 +15,7 @@ const searchData = [];
   insertText("#about .footer", language.thank);
   insertText("#requests > .title", language.listOfRequests.toUpperCase() + ":");
   insertText("#requests-list .empty", language.emptyOfRequests + "...");
+  insertText("#topbar .copyright", language.copyright);
 
   const insertHTML = (query, html) => (document.body.querySelector(query).innerHTML = html);
   const requestNotesList = language.requestNotes.map((e) => `<div>${e}</div>`).join("");
@@ -163,4 +164,6 @@ import dateStringToObject from "../internal/utilities/date-string-to-object.js";
   document.body.querySelector("#topbar .change-language").onclick = gotoChooseLanguages;
   document.body.querySelector("#topbar .donate").onclick = () =>
     (window.location.href = "../donate");
+  document.body.querySelector("#topbar .copyright").onclick = () =>
+    (window.location.href = "../unavailable-songs");
 })();

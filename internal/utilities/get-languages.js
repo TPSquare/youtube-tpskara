@@ -4,7 +4,10 @@ const getAPI = () => {
   const lang = localStorage.getItem("lang");
   if (!lang) gotoChooseLanguages();
   document.documentElement.setAttribute("lang", lang);
-  const dataKey = window.location.pathname.replace("/youtube-tpskara", "").slice(1, -1);
+  const dataKey = window.location.pathname
+    .replace("/youtube-tpskara", "")
+    .replace("index.html", "")
+    .slice(1, -1);
   return `../internal/languages-data/${lang}/${dataKey}.json`;
 };
 

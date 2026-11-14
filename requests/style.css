@@ -446,9 +446,11 @@ main .margin {
   background-color: #323232;
   margin-right: 0;
 }
-
 #topbar .donate {
   background-color: #009292;
+}
+#topbar .copyright {
+  background-color: rgb(183, 44, 44);
 }
 
 @media (max-width: 992px) {

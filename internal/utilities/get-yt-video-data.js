@@ -1,4 +1,4 @@
-import environment from "../../internal/configs/environment.js";
+import environment from "../configs/environment.js";
 
 const TMP_THUMBNAIL_URL = "https://tse4.mm.bing.net/th/id/OIP._k-Rbbqjzn5_zofRRV46YgHaEh";
 
