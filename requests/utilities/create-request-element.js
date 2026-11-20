@@ -122,6 +122,7 @@ export default async function createRequestElement(request, language, searchData
   }
 
   if (config.uploadDate) {
+    addNoOrder();
     const doneElement = document.createElement("div");
     doneElement.className = "done";
     doneElement.textContent = config.uploadDate;
@@ -132,7 +133,6 @@ export default async function createRequestElement(request, language, searchData
     const now = new Date();
     if (now > uploadDate) {
       isUploaded = true;
-      addNoOrder();
 
       doneElement.textContent = language.requestElement.uploaded;
       doneElement.removeAttribute("title");
@@ -145,6 +145,7 @@ export default async function createRequestElement(request, language, searchData
   }
 
   if (config.waitingUpload) {
+    addNoOrder();
     const waitingElement = document.createElement("div");
     waitingElement.className = "waiting";
     waitingElement.textContent = language.requestElement.waitingUpload;
