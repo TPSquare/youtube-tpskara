@@ -104,7 +104,7 @@ export default async function createRequestElement(request, language, searchData
     }
   }
 
-  if (config.recordDate) {
+  if (config.recordDate && !(config.uploadDate || config.waitingUpload)) {
     const remainingData = calculateTheRemainingTime(config.recordDate, EXPIRATION);
     if (remainingData.isExpired) {
       addCancel(language.requestElement.expired);
