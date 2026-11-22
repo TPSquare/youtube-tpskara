@@ -1,6 +1,5 @@
 [
-  { "youtubeID": "6mDLDGROMjE", "priority": "10 USD", "note": "Paypal", "request": "Có hook", "uploadDate": "14:00 22 tháng 11, 2026" },
-  { "youtubeID": "7ypJm3lUupc", "priority": "2,000 VND" },
+  { "youtubeID": "7ypJm3lUupc", "priority": "2,000 VND", "uploadDate": "18:00 22 tháng 11, 2026" },
   { "youtubeID": "N4ziA8NIQEs", "recordDate": "11:54 01/11/2026", "note": "@Chien22gaming" },
   { "youtubeID": "3mvIhUZt8hE", "priority": "15,000 VND", "note": "NGUYEN DUC DAI", "request": "Có hook" },
   { "youtubeID": "BIbgncfLpl0", "recordDate": "11:40 01/11/2026", "note": "@KhánhHưngNguyễn-m4u" },
@@ -37,5 +36,6 @@
   { "youtubeID": "r1B10taGWAw", "recordDate": "02:11 13/11/2026", "note": "@truongduongtruongvu8a158" },
   { "youtubeID": "uPaQjrlREdI", "recordDate": "23:14 17/11/2026", "note": "@HungLe-f6l" },
   { "youtubeID": "FruVMdLNcjA", "recordDate": "14:01 20/11/2026" },
-  { "youtubeID": "sFXagZPquJw", "recordDate": "14:02 20/11/2026" }
+  { "youtubeID": "sFXagZPquJw", "recordDate": "14:02 20/11/2026" },
+  { "youtubeID": "GxGG8C8clFk", "request": "Tone nữ" }
 ]
