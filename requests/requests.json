@@ -1,7 +1,5 @@
 [
-  { "youtubeID": "aqDMflGQTxg", "priority": "34,000 VND", "request": "Ver nam", "uploadDate": "06:00 23 tháng 11, 2026" },
-  { "youtubeID": "N4ziA8NIQEs", "recordDate": "11:54 01/11/2026", "note": "@Chien22gaming", "uploadDate": "10:00 23 tháng 11, 2026" },
-  { "youtubeID": "3mvIhUZt8hE", "priority": "15,000 VND", "note": "NGUYEN DUC DAI", "request": "Có hook" },
+  { "youtubeID": "3mvIhUZt8hE", "priority": "15,000 VND", "note": "NGUYEN DUC DAI", "request": "Có hook", "uploadDate": "06:00 24 tháng 11, 2026" },
   { "youtubeID": "BIbgncfLpl0", "recordDate": "11:40 01/11/2026", "note": "@KhánhHưngNguyễn-m4u" },
   { "youtubeID": "jA_tXDTYROU", "priority": "12,845 VND", "request": "Có đoạn Im in love with Coco.", "note": "Bank" },
   { "youtubeID": "pEMBblu8Lvk", "recordDate": "12:01 01/11/2026", "note": "@Kelgd5506" },
@@ -36,5 +34,6 @@
   { "youtubeID": "uPaQjrlREdI", "recordDate": "23:14 17/11/2026", "note": "@HungLe-f6l" },
   { "youtubeID": "FruVMdLNcjA", "recordDate": "14:01 20/11/2026" },
   { "youtubeID": "sFXagZPquJw", "recordDate": "14:02 20/11/2026" },
-  { "youtubeID": "GxGG8C8clFk", "request": "Tone nữ" }
+  { "youtubeID": "GxGG8C8clFk", "request": "Tone nữ" },
+  { "youtubeID": "eatTadgzThM" }
 ]
